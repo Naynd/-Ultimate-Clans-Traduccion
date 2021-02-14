@@ -256,7 +256,7 @@ Messages:
     help_listregion_empty: '&8 - No hay regiones guardadas'
     help_land_header: '&d&lAyuda a la tierra:'
     help_clan_header: '&d&lAyuda a los clanes:'
-    help_uclan_header: '&4&lAyuda al clan:'
+    help_uclan_header: '&4&lAyuda de clanes:'
     help_profile_header: '&d&lPerfil de &a%player%&d&l:'
     help_stats_header: '&d&lEstado del clan &a%clan_tag%&d&l:'
     list_header: '&d&lLista de clanes: &8(rank/tag/desc/kdr/members)'
