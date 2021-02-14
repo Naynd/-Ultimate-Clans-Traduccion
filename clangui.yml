@@ -1,0 +1,390 @@
+Gui:
+  index_noclan:
+    inventory_name: 'Clan Menu &c(sin clan)'
+    inventory_rows: 3
+    sound-open: ''
+    pagination: []
+    items:
+      1:
+        sound-click: '' #example BLOCK_ANVIL_LAND:1
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTNlMWNiYjFmNDNmYTUxMzA4Yzg0Y2E1ZjNhNTUwMTc4ODE1ODFkZGI5NWZkM2M2OGE5ZGRhMjA5ZDA0NTVhYiJ9fX0='
+        data: 3
+        amount: 1
+        slot: 10
+        name: '&cTu no tienes clan'
+        lore:
+        - ''
+        - ' &eClic para crear clan.'
+        - ' '
+        - ' &7Después de crear un clan puedes reclamar'
+        - '&7tierras y crear la base de su Clan.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan create'
+        right-action:
+        - '[closegui]'
+        - '[player] /clan create'
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
+      commands:
+        sound-click: ''
+        itemstack: 'PAPER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 16
+        name: '&aListas de comandos y ayuda'
+        lore:
+        - ''
+        - ' &eHaga clic para ver la lista completa'
+        - '&ede comandos para Clanes y Tierras.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan help'
+        right-action:
+        - '[closegui]'
+        - '[player] /clan help'
+  index_actions:
+    inventory_name: 'Menú de acciones del clan'
+    inventory_rows: 4
+    sound-open: ''
+    pagination: []
+    items:
+      modtag:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 10
+        name: '&aCambia la etiqueta del clan'
+        lore:
+        - ''
+        - ' &eHaga clic para cambiar la etiqueta del clan'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan modtag'
+        right-action:
+        - '[closegui]'
+        - '[player] clan modtag'
+      desc:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 11
+        name: '&aCambiar la descripción del clan'
+        lore:
+        - ''
+        - ' &eHaga clic para cambiar la descripción del clan.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan desc'
+        right-action:
+        - '[closegui]'
+        - '[player] clan desc'
+      ff:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aFuego amigo'
+        lore:
+        - ''
+        - ' &eClic para activar o desactivar el fuego amigo'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan ff'
+        right-action:
+        - '[closegui]'
+        - '[player] clan ff'
+      sethome:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 13
+        name: '&aEstablece el hogar del clan'
+        lore:
+        - ''
+        - ' &eHaz clic para establecer la Casa del Clan'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan sethome'
+        right-action:
+        - '[closegui]'
+        - '[player] clan sethome'
+      delete:
+        sound-click: ''
+        itemstack: 'STAINED_CLAY'
+        skullowner: ''
+        texture: ''
+        data: 14
+        amount: 1
+        slot: 16
+        name: '&c&lBorrar el clan'
+        lore:
+        - ''
+        - ' &ePulsa para eliminar el clan'
+        - ' &c¡Sólo el Líder puede hacer esto!'
+        - ' &cEsto eliminará la protección de tu tierra'
+        - ' &c¡Esto requiere confirmación en el CHAT!'
+        - ' '
+        - ' &cAtención, esta acción no se puede deshacer!'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan disband'
+        right-action:
+        - '[closegui]'
+        - '[player] clan disband'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&cVuelve'
+        lore:
+        - ''
+        - ' &eHaga clic para regresar'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_hasclan'
+        right-action:
+        - '[opengui] index_hasclan'
+  index_members:
+    inventory_name: 'Menú de los miembros del clan'
+    inventory_rows: 4
+    sound-open: ''
+    pagination: []
+    items:
+      list:
+        sound-click: ''
+        itemstack: 'CHEST'
+        skullowner: ''
+        texture: ''
+        data: 3
+        amount: 1
+        slot: 10
+        name: '&aLista de miembros'
+        lore:
+        - ''
+        - ' &eHaga clic para ver la lista de miembros'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_members] 1'
+        right-action:
+        - '[opengui_members] 1'
+      invite:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aInvitar a los jugadores'
+        lore:
+        - ''
+        - ' &eHaga clic para invitar a nuevos miembros'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan invite'
+        right-action:
+        - '[closegui]'
+        - '[player] clan invite'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&cVuelve'
+        lore:
+        - ''
+        - ' &eHaga clic para volver'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_hasclan'
+        right-action:
+        - '[opengui] index_hasclan'
+  index_hasclan: ##C;WHITE;RED;true
+    inventory_name: 'Clan Menu'
+    inventory_rows: 5
+    sound-open: ''
+    pagination: []
+    items:
+      1:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        banner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDAxYWZlOTczYzU0ODJmZGM3MWU2YWExMDY5ODgzM2M3OWM0MzdmMjEzMDhlYTlhMWEwOTU3NDZlYzI3NGEwZiJ9fX0='
+        data: 3
+        amount: 1
+        slot: 10
+        name: '&aClan %clan_tag%'
+        lore:
+        - ''
+        - ' &eInformación sobre el clan'
+        - ' &7'
+        - ' &7Tag: &b%clan_tag%'
+        - ' &7Nombre: &b%clan_name%'
+        - ' &7Desc: &b%clan_desc%'
+        - ' &7Líder: &b%clan_leader%'
+        - ' &7Fecha de creación: &b%clan_creation%'
+        - ' &7Verificado: &b%clan_verified%'
+        - ' &7Kdr: &b%clan_kills%&8/&b%clan_deaths% &8(%clan_kdr%)'
+        - ' &7Miembros: &b%clan_members%'
+        - ' &7Aliados: &b%clan_ally%'
+        - ' &7Rivales: &b%clan_rival%'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action: []
+        right-action: []
+      membros:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0='
+        data: 3
+        amount: 1
+        slot: 12
+        name: '&aMiembros del clan'
+        lore:
+        - ''
+        - ' &eClic para abrir el menu de miembros.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_members'
+        right-action:
+        - '[opengui] index_members'
+      home:
+        sound-click: ''
+        itemstack: 'BOW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 28
+        name: '&aTeletransporte a casa'
+        lore:
+        - ''
+        - ' &eHaz clic para ir a la casa del clan.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan home'
+        right-action:
+        - '[closegui]'
+        - '[player] /clan home'
+      commands:
+        sound-click: ''
+        itemstack: 'PAPER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&aLista de comandos y ayuda'
+        lore:
+        - ''
+        - ' &eHaz clic para ver la lista completa'
+        - '&ede comandos para Clanes y Tierras.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /clan help'
+        right-action:
+        - '[closegui]'
+        - '[player] /clan help'
+      actions:
+        sound-click: ''
+        itemstack: 'REDSTONE_COMPARATOR'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 34
+        name: '&aAcciones'
+        lore:
+        - ''
+        - ' &eClic para abrir.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_actions'
+        right-action:
+        - '[opengui] index_actions'
