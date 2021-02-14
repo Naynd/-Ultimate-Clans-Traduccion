@@ -194,15 +194,15 @@ Clan:
 
 Messages:
   hologram:
-    disabled: '%tag% &cHolograms are off.'
-    not_exists: '%tag% &cThis hologram does not exist'
-    teleported: '%tag% &eYou have been teleported to the hologram &b%id%'
-    header: '&d&lList of Holograms:'
+    disabled: '%tag% &cHologramas desactivados.'
+    not_exists: '%tag% &cEste holograma no existe'
+    teleported: '%tag% &eAs sido teleportado el holograma &b%id%'
+    header: '&d&lLista de hologramas:'
     format_checked: ' &7&m%num%° &8&m- &7&m%id%&r &a&lOK'
     format_unchecked: ' &a%num%° &7- &b%id% &7- &b%location% &8(%world%&8)'
     footer: ''
-    empty: ' &cNo status to show.'
-    wait: ' &ewait....'
+    empty: ' &cNo ay estado para mostrar.'
+    wait: ' &eespera....'
   comum:
     empty: ' '
     player_kicked_out_toclan: '%tag% &4%player% &ha sido expulsado del clan por &a%clan_leader%'
