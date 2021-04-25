@@ -2,75 +2,75 @@ Json:
   simple:
     command_unknown:
       center: false
-      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/uclan help &cto see the list of available commands.'
-      hover_text: '&aClick here to view Help.'
+      raw_text: '%tag% &cComando invalido, &b[CLICK HERE] &co utilice &d/uclan help &cpara ver la lista de comandos disponibles.'
+      hover_text: '&aPulse aquí para ver la ayuda.'
       click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
       click_action: '/uclan help'
       raw_base_color: 'RED'
     command_unknown_player:
       center: false
-      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/clan help &cto see the list of available commands.'
-      hover_text: '&aClick here to view Help.'
+      raw_text: '%tag% &cComando invalido, &b[CLICK HERE] &co utilice &d/clan help &cpara ver la lista de comandos disponibles.'
+      hover_text: '&aPulse aquí para ver la ayuda.'
       click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
       click_action: '/clan help'
       raw_base_color: 'RED'
     clan_ally_rival_list_format:
       raw_text: ' &8%clan_tag% &7- &b%clan_kdr% &7- &b%clan_members_count%'
-      hover_text: '&aShows Clan information.'
+      hover_text: '&aMuestra información del clan.'
       click_type: 'SUGGEST_COMMAND'
       click_action: '/clan info %clan_tag_nocolor%'
     clan_list_format:
       raw_text: ' &a%clan_rank%° &7- &8%clan_tag% &7- &f%clan_desc% &7- &b%clan_kdr% &7- &b%clan_members_count%'
-      hover_text: '&aClick show info of clan.'
+      hover_text: '&aHaz clic en mostrar información del clan.'
       click_type: 'SUGGEST_COMMAND'
       click_action: '/clan info %clan_tag_nocolor%'
     list_next:
-      raw_text: ' &bNext page >>'
-      hover_text: '&aClick to see the next page.'
+      raw_text: ' &bPágina siguiente >>'
+      hover_text: '&aHaga clic para ver la siguiente página.'
       click_type: 'RUN_COMMAND'
       click_action: '/clan list %next_page%'
     list_prev:
-      raw_text: ' << &bPrevious page'
-      hover_text: '&aClick to see the previous page.'
+      raw_text: ' << &bPágina anterior'
+      hover_text: '&aHaga clic para ver la página anterior.'
       click_type: 'RUN_COMMAND'
       click_action: '/clan list %prev_page%'
     list_controler:
-      raw_text: ' << &bPrevious page'
-      hover_text: '&aClick to see the previous page.'
+      raw_text: ' << &bPágina anterior'
+      hover_text: '&aHaga clic para ver la página anterior.'
       click_type: 'RUN_COMMAND'
       click_action: '/clan list %prev_page%'
     clan_deleted:
       raw_text: ' &a%clan_rank%° &7- &c&mDeleted clan!'
-      hover_text: '&cSoon it will leave this list!'
+      hover_text: '&cPronto abandonará esta lista!'
       click_type: ''
       click_action: ''
     war_left_player:
-      raw_text: '%tag% &ePlayer &b%player% &eis out of the war, &b%clanall_joined_players%&7/&b%max% &eleft.'
+      raw_text: '%tag% &eEl jugador &b%player% &eestá fuera de la guerra, &b%clanall_joined_players%&7/&b%max% &erestates.'
       hover_text: ''
       click_type: ''
       click_action: ''
     war_send_to:
-      raw_text: '%tag% &aThe clan &b%clan1% &achallenged the clan &b%clan2% &ato war, awaiting ...'
+      raw_text: '%tag% &aEl clan &b%clan1% &a desafio al clan &b%clan2% &a a la guerra, esperando ...'
       hover_text: ''
       click_type: ''
       click_action: ''
     war_send_accepted:
-      raw_text: '%tag% &aThe &b%clan2% &aclan accepted the &b%clan1% &awar challenge, the battle begins soon!'
+      raw_text: '%tag% &aEl &b%clan2% &a a aceptado el reto de guerra del &b%clan1% &a, ¡la batalla comienza pronto!'
       hover_text: ''
       click_type: ''
       click_action: ''
     war_send_danied:
-      raw_text: '%tag% &cThe %clan2% &cclan did not accept the &b%clan1% &cwar challenge.'
+      raw_text: '%tag% &cEl clan %clan2% &cno acepto el reto de guerra del clan &b%clan1%.'
       hover_text: ''
       click_type: ''
       click_action: ''
     war_send_started:
-      raw_text: '%tag% &aThe war between the &b%clan1% &aand &b%clan1% &aclans has started.'
+      raw_text: '%tag% &aLa guerra entre los &b%clan1% &a y los &b%clan1% &aclanes ha comenzado.'
       hover_text: ''
       click_type: ''
       click_action: ''
     war_send_ending:
-      raw_text: '%tag% &aThe war between the &b%clan1% &aand &b%clan2% &aclans ended, the winner was the &b&l%clan_tag_winner% &aclan.'
+      raw_text: '%tag% &aLa guerra entre &b%clan1% &a y &b%clan2% &aa terminado, el ganador fue el clan &b&l%clan_tag_winner%.'
       hover_text: ''
       click_type: ''
       click_action: ''
@@ -85,8 +85,8 @@ Json:
           raw_text: ''
           sublines:
             prev:
-              raw_text: ' &a<< Previous '
-              hover_text: '&aClick to see the previous page.'
+              raw_text: ' &a<< Anterior '
+              hover_text: '&aHaga clic para ver la página anterior.'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan help %prev_page%'
               raw_base_color: ''
@@ -97,8 +97,8 @@ Json:
               click_action: ''
               raw_base_color: ''
             next:
-              raw_text: ' &aNext >> '
-              hover_text: '&aClick to see the next page.'
+              raw_text: ' &aSiguiente >> '
+              hover_text: '&aHaga clic para ver la siguiente página.'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan help %next_page%'
               raw_base_color: ''
@@ -111,15 +111,15 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eInvitation received to join Clan &f%clan_tag%'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eInvitación recibida para unirse al Clan &f%clan_tag%'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan <join/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
         expires:
           center: true
-          raw_text: '&7Expires in &b%sec_expires% sec&7.'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&7Expira en &b%sec_expires% sec&7.'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan <join/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
@@ -131,13 +131,13 @@ Json:
           sublines:
             1:
               raw_text: '&a&l[ACCEPT]'
-              hover_text: '&aClick to accept, or use &b/clan accept %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para aceptar, o utilice &b/clan accept %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan join %clan_tag_nocolor%'
               raw_base_color: ''
             2:
               raw_text: '      &c&l[DENY]'
-              hover_text: '&aClick to deny the request, or use &b/clan deny %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para denegar la solicitud, o utilice &b/clan deny %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan deny %clan_tag_nocolor%'
               raw_base_color: ''
@@ -157,15 +157,15 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eAlliance request received from clan &f%clan_tag%'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eSolicitud de alianza recibida del clan &f%clan_tag%'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan ally <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
         expires:
           center: true
-          raw_text: '&7Expires in &b%sec_expires% sec&7.'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&7Expira en &b%sec_expires% sec&7.'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan ally <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
@@ -177,13 +177,13 @@ Json:
           sublines:
             1:
               raw_text: '&a&l[ACCEPT]'
-              hover_text: '&aClick to accept, or use &b/clan ally accept %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para aceptar, o utilice &b/clan ally accept %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan ally accept %clan_tag_nocolor%'
               raw_base_color: ''
             2:
               raw_text: '      &c&l[DENY]'
-              hover_text: '&aClick to deny the request, or use &b/clan ally deny %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para denegar la solicitud, o utilice &b/clan ally deny %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan ally deny %clan_tag_nocolor%'
               raw_base_color: ''
@@ -201,15 +201,15 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eA war is about to begin!'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eUna guerra está a punto de comenzar!'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war join'
           raw_base_color: 'SILVER'
         name2:
           center: true
-          raw_text: '&c&l! &eHelp your team win this battle!'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eAyuda a tu equipo a ganar esta batalla!'
+          hover_text: '&aPulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war join'
           raw_base_color: 'SILVER'
@@ -219,7 +219,7 @@ Json:
           sublines:
             1:
               raw_text: '&a&l[JOIN]'
-              hover_text: '&aClick to accept, or use &b/clan war join'
+              hover_text: '&aHaga clic para aceptar, o utilice &b/clan war join'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan war join'
               raw_base_color: ''
@@ -237,11 +237,11 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eThe time for entering the war is over!'
+          raw_text: '&c&l! &eEl momento de entrar en guerra ha terminado!'
           raw_base_color: 'SILVER'
         wait:
           center: true
-          raw_text: '&c&l! &eGet ready, the war starts in a few seconds!'
+          raw_text: '&c&l! &ePrepárate, la guerra comienza en unos segundos!'
           raw_base_color: 'SILVER'
         end:
           center: true
@@ -257,7 +257,7 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eThe war has begun, may the best clan win!'
+          raw_text: '&c&l! &eLa guerra ha comenzado, que gane el mejor clan!'
           raw_base_color: 'SILVER'
         end:
           center: true
@@ -273,11 +273,11 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eThe war is over, Winning clan: &b%clan_tag_winner%'
+          raw_text: '&c&l! &eLa guerra ha terminado, el clan Ganador es: &b%clan_tag_winner%'
           raw_base_color: 'YELLOW'
         winn:
           center: true
-          raw_text: '&c&l! &eHas 60 sec to collect the spoils of war!'
+          raw_text: '&c&l! &eTiene 60 segundos para recoger el botín de guerra!'
           raw_base_color: 'YELLOW'
         end:
           center: true
@@ -293,7 +293,7 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eThe war is over!'
+          raw_text: '&c&l! &eLa guerra ha terminado!'
           raw_base_color: 'SILVER'
         end:
           center: true
@@ -309,11 +309,11 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: true
-          raw_text: '&c&l! &eThe event has been canceled!'
+          raw_text: '&c&l! &eEl evento ha sido cancelado!'
           raw_base_color: 'SILVER'
         reason:
           center: true
-          raw_text: '&c&l! &cReason: %reason%'
+          raw_text: '&c&l! &cRazón: %reason%'
           raw_base_color: 'SILVER'
         end:
           center: true
@@ -324,7 +324,7 @@ Json:
       lines:
         name:
           center: false
-          raw_text: '%tag%  &eWaiting for players. Joined: &b%clanall_joined_players%&7/&b%max%&e, Time: &b%war_time_next% sec.'
+          raw_text: '%tag%  &eA la espera de jugadores. Se ha unido a: &b%clanall_joined_players%&7/&b%max%&e, Tiempo: &b%war_time_next% seg.'
           raw_base_color: 'SILVER'
         spaceX:
           raw_text: ' '
@@ -332,7 +332,7 @@ Json:
       lines:
         name:
           center: false
-          raw_text: '%tag% &b%player% &eof clan &b%clan% &ejoined: &b%clanall_joined_players%&7/&b%max%&e.'
+          raw_text: '%tag% &b%player% &edel clan &b%clan% &eentro: &b%clanall_joined_players%&7/&b%max%&e.'
           raw_base_color: 'SILVER'
         spaceX:
           raw_text: ' '
@@ -345,29 +345,29 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         send:
           center: true
-          raw_text: '&c&l! &eA war challenge was thrown at your clan!'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eUn desafío de guerra fue lanzado a su clan!'
+          hover_text: '&Pulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
         name:
           center: true
-          raw_text: '&c&l! &eChallenging clan: &f%clan_tag%'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eClan desafiante: &f%clan_tag%'
+          hover_text: '&Pulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
         info:
           center: true
-          raw_text: '&c&l! &eArena: &f%arena% &7- &eMax Players: &b%max%'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&c&l! &eArena: &f%arena% &7- &eJugadores máximos: &b%max%'
+          hover_text: '&Pulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
         expires:
           center: true
-          raw_text: '&7Expires in &b%sec_expires% sec&7.'
-          hover_text: '&aClick to ACCEPT or DENY.'
+          raw_text: '&7Expira en &b%sec_expires% sec&7.'
+          hover_text: '&Pulse para ACEPTAR o DENEGAR.'
           click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan war <accept/deny> %clan_tag_nocolor%'
           raw_base_color: 'SILVER'
@@ -379,13 +379,13 @@ Json:
           sublines:
             1:
               raw_text: '&a&l[ACCEPT/JOIN]'
-              hover_text: '&aClick to accept, or use &b/clan war accept %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para aceptar, o utilice &b/clan war accept %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan war accept %clan_tag_nocolor%'
               raw_base_color: ''
             2:
               raw_text: '      &c&l[DENY]'
-              hover_text: '&aClick to deny the request, or use &b/clan war deny %clan_tag_nocolor%'
+              hover_text: '&aHaga clic para denegar la solicitud, o utilice &b/clan war deny %clan_tag_nocolor%'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan war deny %clan_tag_nocolor%'
               raw_base_color: ''
@@ -403,8 +403,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type in the chat the name of the new clan you want to create or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe en el chat el nombre del nuevo clan que quieres crear o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -422,8 +422,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type &b&l%confirm_action% &r&7in the chat to confirm or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe &b&l%confirm_action% &r&7 en el chat para confirmar o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -441,8 +441,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type &b&l%confirm_action% &r&7in the chat to confirm or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe &b&l%confirm_action% &r&7 en el chat para confirmar o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -460,8 +460,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type in the chat the new TAG of the clan or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe en el chat el nuevo TAG del clan o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -479,8 +479,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type in the chat the new clan description or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe en el chat la descripción del nuevo clan o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -498,8 +498,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Type in the chat the new clan name or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe en el chat el nuevo nombre del clan o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
@@ -517,8 +517,8 @@ Json:
           raw_text: '&c&m-&7&m---------------------------------------------&c&m-'
         name:
           center: false
-          raw_text: '%tag% &7Write in the chat who you want to invite to the clan or &c&l[CLICK &c&lHERE] &r&7to cancel!'
-          hover_text: '&eClick to cancel action'
+          raw_text: '%tag% &7Escribe en el chat a quién quieres invitar al clan o &c&l[CLICK &c&lAQUI] &r&7para cancelar!'
+          hover_text: '&ePulse para cancelar la acción'
           click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
           click_action: '/clan cancel'
           raw_base_color: 'SILVER'
