@@ -1,164 +1,29 @@
 Commands:
-  aliases_to_help_commands: true
   list:
-    action_create:
-      space0:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-      text:
-        permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
-        show:
-            on_help: ' &8Escribe en el chat el nombre del nuevo clan que quieres crear o &l&fHaz clic aquí &r&8para cancelar!'
-            on_help_json:
-              hover_text: '&aDescripción del gestor de clanes.'
-              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/clan cancel'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
-      space1:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-    action_disband:
-      space0:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-      text:
-        permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
-        show:
-            on_help: ' &8Escribe &f&l%confirm_action% &r&8en el chat para confirmar o &l&fCLICK AQUI &r&8para cancelar!'
-            on_help_json:
-              hover_text: '&aClan disuelto.'
-              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/clan cancel'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
-      space1:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-    action_modtag:
-      space0:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-      text:
-        permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
-        show:
-            on_help: ' &8Escribe en el chat el nuevo TAG del clan o &f&lHaz clic aquí &r&8para cancelar!'
-            on_help_json:
-              hover_text: '&aDescripción del gestor del clan.'
-              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/clan cancel'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
-      space1:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-    action_desc:
-      space0:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-      text:
-        permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
-        show:
-            on_help: ' &8Escribe en el chat la nueva descripción del clan o &f&lHaz clic aquí &r&8para cancelar!'
-            on_help_json:
-              hover_text: '&aDescripción del gestor del clan.'
-              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/clan cancel'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
-      space1:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-    action_invite:
-      space0:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
-      text:
-        permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
-        show:
-            on_help: ' &8Escribe en el chat a quién quieres invitar al clan o &f&lHaz clic aquí &r&8para cancelar!'
-            on_help_json:
-              hover_text: '&aDescripción del administrador del clan.'
-              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/clan cancel'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
-      space1:
-        show:
-            on_help: ' '
-            on_help_json:
-              hover_text: ''
-              click_type: ''
-              click_action: ''
     clan:
       separer4:
         permission: ''
-        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        no_permission_message: '%tag% &cNo tienes permiso para hacer esto.'
         alias: ''
         show:
-            on_help: ' &8Administrador del clan: &6[?]'
+            on_help: ' &8Gestor de clanes: &6[?]'
             on_help_json:
-              hover_text: '&aDescripción del gestor del clan.'
+              hover_text: '&aDescripción del gestor de clanes.'
               click_type: ''
               click_action: ''
       help:
         permission: 'uclans.player.help'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
+        alias: 'ajuda'
         show:
-            on_help: ' &b/clan help &7-&e Muestra el menú de ayuda.'
+            on_help: ' &b/clan help &7-&e Mostrar el menú de ayuda.'
             on_help_json:
-              hover_text: '&aHaz clic para ver la ayuda de Clanes.'
+              hover_text: '&aClick para ver la ayuda de Clanes.'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/clan help'
             on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
+            on_error: '%tag% &cError al mostrar el texto.'
+            on_usage: '%tag% &cUsa &b/clan help'
         sound:
             on_help: ''
             on_success: ''
@@ -174,18 +39,47 @@ Commands:
             on_help: ''
             on_success: ''
             on_error: ''
+      war:
+        permission: 'uclans.player.war'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'war'
+        show:
+            on_help: ' &b/clan war <send|accept|deny|join> &7-&e Envía un desafío de guerra.'
+            on_help_json:
+              hover_text: '&aHaga clic para enviar un desafío de guerra.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/clan war <send|accept|deny|join>'
+            on_success: '%tag% &aEl desafío a una guerra fue enviado con éxito, ¡espera la respuesta!'
+            on_error: '%tag% &cHubo un error al enviar el desafío.'
+            on_usage: '%tag% &cUsa &b/clan war <send|accept|deny|join>'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aCreated &f%clan_tag%%nl%&b%clan_desc%'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aSe creó un nuevo clan &f%clan_tag%&a con el tag &b%clan_desc%'
+            on_error: '&cError, Inténtalo de nuevo...'
       create:
         permission: 'uclans.player.create'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
+        alias: 'criar'
         show:
-            on_help: ' &b/clan create &7-&e Crea un nuevo Clan.'
+            on_help: ' &b/clan create &7-&e Crear un nuevo clan.'
             on_help_json:
               hover_text: '&aHaz clic para crear un nuevo clan.'
-              click_type: 'SUGERENCIA_COMANDO'
+              click_type: 'SUGGEST_COMMAND'
               click_action: '/clan create <tag>'
             on_success: '%tag% &a¡Has creado un nuevo clan!'
-            on_error: '%tag% &cUsa &b/clan create <tag>'
+            on_error: '%tag% &cError al crear un nuevo clan, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan create <tag>'
         sound:
             on_help: ''
             on_success: ''
@@ -195,24 +89,81 @@ Commands:
               pitch: 1
         title:
             on_help: ''
-            on_success: '&aCreated &f%clan_tag%nl%&b%clan_desc%'
-            on_error: '&c¡Error!%nl%&cIntenta de nuevo...'
+            on_success: '&aCreated &f%clan_tag%%nl%&b%clan_desc%'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
         actionbar:
             on_help: ''
-            on_success: '&aCreado un nuevo clan &f%clan_tag%&a con la etiqueta &b%clan_desc%'
-            on_error: '&cError, Intenta de nuevo...'
+            on_success: '&aSe creó un nuevo clan &f%clan_tag%&a con el tag &b%clan_desc%'
+            on_error: '&cError, Inténtalo de nuevo...'
+      changeleader:
+        permission: 'uclans.player.changeleader'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'mudarlider'
+        show:
+            on_help: ' &b/clan changeleader <player> &7-&e Transferir el liderazgo.'
+            on_help_json:
+              hover_text: '&aHaga clic para transferir el liderazgo.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/clan changeleader <player>'
+            on_success: '%tag% &aHas cambiado el liderazgo del clan por %clan_leader%'
+            on_error: '%tag% &cEl error de transferir el liderazgo.'
+            on_usage: '%tag% &cUsa &b/clan changeleader <player>'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aCreated &f%clan_tag%%nl%&b%clan_desc%'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aSe creó un nuevo clan &f%clan_tag%&a con el tag &b%clan_desc%'
+            on_error: '&cError, Inténtalo de nuevo...'
+      chest:
+        permission: 'uclans.player.chest'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'bau'
+        show:
+            on_help: ' &b/clan chest &7-&e Abrir cofre compartido del clan.'
+            on_help_json:
+              hover_text: '&aHaz clic para crear un nuevo clan.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/clan chest'
+            on_success: '%tag% &aÉxito!'
+            on_error: '%tag% &cError al abrir, inténtelo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan chest'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: ''
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aEl cofre compartido se ha abierto con éxito.'
+            on_error: '&cError, Inténtalo de nuevo...'
       desc:
         permission: 'uclans.player.desc'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'desc'
+        alias: 'descricao'
         show:
-            on_help: ' &b/clan desc &7-&e Añadir desc a Clan.'
+            on_help: ' &b/clan desc &7-&e Añadir desc al Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para añadir/cambiar una descripción del clan.'
-              click_type: 'SUGERENCIA_COMANDO'
+              hover_text: '&aHaz clic para añadir/cambiar la descripción de un clan.'
+              click_type: 'SUGGEST_COMMAND'
               click_action: '/clan desc <desc>'
-            on_success: '%tag% &a¡Has cambiado la descripción del clan!'
-            on_error: '%tag% &cUsa &b/clan desc <description>'
+            on_success: '%tag% &a¡Has cambiado la descripción de clan!'
+            on_error: '%tag% &cError al cambiar la descripción del Clan.'
+            on_usage: '%tag% &cUsa &b/clan desc <description>'
         sound:
             on_help: ''
             on_success: ''
@@ -222,24 +173,25 @@ Commands:
               pitch: 1
         title:
             on_help: ''
-            on_success: '&aDescripción cambiada%nl%&b%clan_desc%'
-            on_error: '&c¡Error!%nl%&cIntenta de nuevo...'
-        barra de acción:
+            on_success: '&aClan Desc cambiado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
             on_help: ''
-            on_success: '&aDescripción cambiada a &b%clan_desc%'
-            on_error: '&cError, Intente de nuevo...'
-      disolver:
+            on_success: '&aHas cambiado el Desc. del Clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      disband:
         permission: 'uclans.player.disband'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: ''
+        alias: 'debandar'
         show:
-            on_help: ' &b/clan disband &7-&e Borra tu Clan.'
+            on_help: ' &b/clan disband &7-&e Borrar tu Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para disolver un clan.'
-              click_type: 'SUGERENCIA_COMANDO'
+              hover_text: '&aHaz clic para disolver el clan.'
+              click_type: 'SUGGEST_COMMAND'
               click_action: '/clan disband'
-            on_success: '%tag% &a¡Has eliminado tu clan!'
-            on_error: '%tag% &cUsa &b/clan disband <tag> <description>'
+            on_success: '%tag% &a¡Has borrado tu clan!'
+            on_error: '%tag% &cError al borrar el Clan, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan disband CONFIRM'
         sound:
             on_help: ''
             on_success: ''
@@ -247,18 +199,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&a¡Clan eliminado!'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas borrado el Clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
       leave:
         permission: 'uclans.player.leave'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'sair'
         show:
-            on_help: ' &b/clan leave &7-&e Dejar un clan.'
+            on_help: ' &b/clan leave &7-&e Abandonar un clan.'
             on_help_json:
-              hover_text: '&aHaz clic para abandonar un Clan.'
-              click_type: 'SUGERIR_COMANDOS'
+              hover_text: '&aHaz clic para dejar un clan.'
+              click_type: 'SUGGEST_COMMAND'
               click_action: '/clan leave'
-            on_success: '%tag% &a¡Has dejado el Clan!'
-            on_error: '%tag% &cUsa &b/clan leave'
+            on_success: '%tag% &a¡Has abandonado el Clan!'
+            on_error: '%tag% &cError al salir del Clan, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan leave'
         sound:
             on_help: ''
             on_success: ''
@@ -266,6 +227,14 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aAbandonaste el clan.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aAbandonó el clan'
+            on_error: '&cError, Inténtalo de nuevo...'
       invite:
         permission: 'uclans.player.invite'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -276,8 +245,24 @@ Commands:
               hover_text: '&aHaz clic para enviar la invitación al jugador'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan invite <player>'
-            on_success: '%tag% &e¡Se ha enviado una invitación al jugador, por favor espere!'
-            on_error: '%tag% &cUse &b/clan invite <player>'
+            on_success: '%tag% &eSe ha enviado una invitación al jugador, ¡por favor espere!'
+            on_error: '%tag% &cError al invitar al jugador.'
+            on_usage: '%tag% &cUsa &b/clan invite <player>'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aInvitación enviada.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas enviado la invitación.'
+            on_error: '&cError, Inténtalo de nuevo...'
       join:
         permission: 'uclans.player.join'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -285,11 +270,12 @@ Commands:
         show:
             on_help: ' &b/clan join <tag> &7-&e Invita a un jugador a tu clan.'
             on_help_json:
-              hover_text: '&aHaz clic para aceptar la invitación.'
+              hover_text: '&aHaga clic para aceptar la invitación.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan join <tag>'
             on_success: '%tag% &e¡Has aceptado la invitación para entrar en el clan!'
-            on_error: '%tag% &cUsa &b/clan join <tag>'
+            on_error: '%tag% &cError al entrar el clan, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan join <tag>'
         sound:
             on_help: ''
             on_success: ''
@@ -297,6 +283,14 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aSe unió al clan'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aTe has unido al clan'
+            on_error: '&cError, Inténtalo de nuevo...'
       deny:
         permission: 'uclans.player.deny'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -304,11 +298,12 @@ Commands:
         show:
             on_help: ' &b/clan deny <tag> &7-&e Invita a un jugador a tu clan.'
             on_help_json:
-              hover_text: '&aHaz clic para cancelar la invitación.'
+              hover_text: '&aHaga clic para cancelar la invitación.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan deny <tag>'
-            on_success: '%tag% &e¡Ha denegado la invitación!'
-            on_error: '%tag% &cUse &b/clan deny <tag>'
+            on_success: '%tag% &e¡Has rechazado la invitación!'
+            on_error: '%tag% &cError al rechazar la invitación.'
+            on_usage: '%tag% &cUsa &b/clan deny <tag>'
         sound:
             on_help: ''
             on_success: ''
@@ -316,18 +311,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aHas negado'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas negado'
+            on_error: '&cError, Inténtalo de nuevo...'
       kick:
         permission: 'uclans.player.kick'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'remover'
         show:
-            on_help: ' &b/clan kick <player> &7-&e Eliminar jugador del Clan.'
+            on_help: ' &b/clan kick <player> &7-&e Eliminar a un jugador del Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para eliminar un jugador del Clan.'
+              hover_text: '&aHaz clic para eliminar a un jugador del Clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan kick <jugador>'
+              click_action: '/clan kick <player>'
             on_success: '%tag% &eEl jugador ha sido eliminado del clan.'
-            on_error: '%tag% &cUse &b/clan kick <player>'
+            on_error: '%tag% &cError al expulsar al jugador.'
+            on_usage: '%tag% &cUsa &b/clan kick <player>'
         sound:
             on_help: ''
             on_success: ''
@@ -335,18 +339,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aJugador eliminado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas eliminado al jugador.'
+            on_error: '&cError, Inténtalo de nuevo...'
       promote:
         permission: 'uclans.player.promote'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'promover'
         show:
-            on_help: ' &b/clan promote <player> &7-&e Promover jugador.'
+            on_help: ' &b/clan promote <player> &7-&e Promover a un jugador a Mod.'
             on_help_json:
-              hover_text: '&aHaz clic para promover al jugador.'
+              hover_text: '&aHaga clic para promocionar al jugador.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan promote <jugador>'
-            on_success: '%tag% &eJugador promovido a Mod del clan.'
-            on_error: '%tag% &cUse &b/clan promote <player>'
+              click_action: '/clan promote <player>'
+            on_success: '%tag% &eJugador ascendido a Mod de clan.'
+            on_error: '%tag% &cError al promocionar al jugador, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan promote <player>'
         sound:
             on_help: ''
             on_success: ''
@@ -354,18 +367,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      degradar:
+        title:
+            on_help: ''
+            on_success: '&aJugador promovido.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas promovido al jugador.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      demote:
         permission: 'uclans.player.demote'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'demote'
+        alias: 'rebaixar'
         show:
-            on_help: ' &b/clan demote <player> &7-&e Demote al jugador en el Clan.'
+            on_help: ' &b/clan demote <player> &7-&e degradar a un jugador en un clan.'
             on_help_json:
-              hover_text: '&aHaz clic para degradar a un jugador.'
+              hover_text: '&aHaga clic para degradar al jugador.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan degradar <jugador>'
+              click_action: '/clan demote <player>'
             on_success: '%tag% &eEl jugador ha sido degradado en el clan.'
-            on_error: '%tag% &cUse &b/clan demote <player>'
+            on_error: '%tag% &cError al degradar a este jugador, inténtalo de nuevo'
+            on_usage: '%tag% &cUsa &b/clan demote <player>'
         sound:
             on_help: ''
             on_success: ''
@@ -373,18 +395,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aJugador degradado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas degradado al jugador.'
+            on_error: '&cError, Inténtalo de nuevo...'
       sethome:
         permission: 'uclans.player.sethome'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'setarcasa'
         show:
-            on_help: ' &b/clan sethome &7-&e Establecer un hogar de Clan.'
+            on_help: ' &b/clan sethome &7-&e Establecer el hogar del Clan.'
             on_help_json:
-              hover_text: '&aHaga clic para establecer un hogar de Clan'
-              click_type: 'SUGERENCIA_COMANDO'
+              hover_text: '&aHaga clic para establecer el hogar del Clan'
+              click_type: 'SUGGEST_COMMAND'
               click_action: '/clan sethome'
-            on_success: '%tag% &a¡Has establecido un hogar de Clan en tu posición!'
-            on_error: '%tag% &cUsa &b/clan sethome'
+            on_success: '%tag% &a¡Has puesto el hogar del Clan en tu posición!'
+            on_error: '%tag% &cError al establecer el hogar del clan, inténtalo de nuevo.'
+            on_usage: '%tag% &cUsa &b/clan sethome'
         sound:
             on_help: ''
             on_success: ''
@@ -392,18 +423,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aHogar establecido.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aUsted establecio el hogar.'
+            on_error: '&cError, Inténtalo de nuevo...'
       home:
         permission: 'uclans.player.home'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'casa'
         show:
-            on_help: ' &b/casa del clan &7-&e Teletransporte a la casa del clan.'
+            on_help: ' &b/clan home &7-&e Teletransporte al hogar del clan.'
             on_help_json:
-              hover_text: '&aHaz clic para teletransportarte a la casa del Clan.'
+              hover_text: '&aHaz clic para teletransportarte al hogar del Clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan home'
-            on_success: '%tag% &a¡Te has teletransportado a la casa del Clan!'
-            on_error: '%tag% &cUsa &b/clan home'
+            on_success: '%tag% &a¡Te has teletransportado al hogar del Clan!'
+            on_error: '%tag% &cError de teletransporte al hogar del clan.'
+            on_usage: '%tag% &cUsa &b/clan home'
         sound:
             on_help: ''
             on_success: ''
@@ -411,18 +451,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aTeletransportado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas sido teletransportado.'
+            on_error: '&cError, Inténtalo de nuevo...'
       chat:
         permission: 'uclans.player.chat'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'info'
+        alias: 'chat'
         show:
-            on_help: ' &b/clan chat &7-&e Bloquear el chat al Clan o usar &b/. <msg>'
+            on_help: ' &b/clan chat &7-&e Alternar el chat al Clan o utiliza &b/. <msg>'
             on_help_json:
-              hover_text: '&aHaga clic para activar el chat del clan.'
+              hover_text: '&aHaz clic para alternar el chat del clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan chat'
-            on_success: '%tag% &eClan bloqueó el chat como ahora: &b%player_chat%'
-            on_error: '%tag% &cUse &b/clan chat'
+            on_success: '%tag% &eChat bloqueado del clan como ahora: &b%player_chat%'
+            on_error: '%tag% &cError al usar el chat.'
+            on_usage: '%tag% &cUsa &b/clan chat'
         sound:
             on_help: ''
             on_success: ''
@@ -430,18 +479,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aChat alternado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas alternado el chat.'
+            on_error: '&cError, Inténtalo de nuevo...'
       ff:
         permission: 'uclans.player.ff'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'info'
+        alias: 'ff'
         show:
-            on_help: ' &b/clan ff &7-&e Activar el fuego frito en el clan.'
+            on_help: ' &b/clan ff &7-&e Alternar el fuego amigo en el clan.'
             on_help_json:
               hover_text: '&aHaz clic para activar el fuego amigo del clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan ff'
-            on_success: '%tag% &eFuego amigo del clan como cambiado a &b%clan_ff%'
-            on_error: '%tag% &cUse &b/clan ff'
+            on_success: '%tag% &eEl fuego amigo del clan ha cambiado a &b%clan_ff%'
+            on_error: '%tag% &cError al usar ff.'
+            on_usage: '%tag% &cUsa &b/clan ff'
         sound:
             on_help: ''
             on_success: ''
@@ -449,18 +507,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aAlternado FF.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aAs alternado FF.'
+            on_error: '&cError, Inténtalo de nuevo...'
       name:
         permission: 'uclans.player.name'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'nome'
         show:
-            on_help: ' &b/clan name <name> &7-&e Cambiar el nombre del clan.'
+            on_help: ' &b/clan name <name> &7-&e No tienes permiso para esto.'
             on_help_json:
               hover_text: '&aHaz clic para cambiar el nombre del clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan name <nombre>'
-            on_success: '%tag% &eEl nombre del clan ha sido cambiado.'
-            on_error: '%tag% &cHa habido un error al cambiar el nombre del clan'
+              click_action: '/clan name <name>'
+            on_success: '%tag% &eSe ha cambiado el nombre del clan.'
+            on_error: '%tag% &cHubo un error al cambiar el nombre del clan'
+            on_usage: '%tag% &cUsa &b/clan name <name>'
         sound:
             on_help: ''
             on_success: ''
@@ -468,18 +535,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aNombre del clan cambiado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas cambiado el nombre del clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
       modtag:
         permission: 'uclans.player.modtag'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'mudartag'
         show:
-            on_help: ' &b/clan modtag <newtag> &7-&e Cambiar etiqueta de Clan.'
+            on_help: ' &b/clan modtag <newtag> &7-&e Cambiar el tag de Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para activar el fuego amigo del clan.'
+              hover_text: '&aHaga clic para cambiar el tag del clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan modtag <newtag>'
-            on_success: '%tag% &eUna etiqueta de Clan como cambiada a &b%clan_tag%'
-            on_error: '%tag% &cUse &b/clan modtag <newtag>'
+            on_success: '%tag% &eLa etiqueta del Clan cambiada a &b%clan_tag%'
+            on_error: '%tag% &cError al cambiar el tag del clan.'
+            on_usage: '%tag% &cUsa &b/clan modtag <newtag>'
         sound:
             on_help: ''
             on_success: ''
@@ -487,6 +563,14 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aTag de clan cambiada.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas cambiado el tag del clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
       separer3:
         permission: ''
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -504,11 +588,12 @@ Commands:
         show:
             on_help: ' &b/clan list <pag> &7-&e Lista de todos los clanes.'
             on_help_json:
-              hover_text: '&aHaz clic para listar todos los Clanes.'
+              hover_text: '&aHaga clic para ver la lista de todos los clanes.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan list'
-            on_success: ''
-            on_error: '%tag% &cUsa &b/clan list <pag>'
+              click_action: '/clan list '
+            on_success: '%tag% &aéxito al usar la lista.'
+            on_error: '%tag% &cError al usar la lista.'
+            on_usage: '%tag% &cUsa &b/clan list <pag>'
         sound:
             on_help: ''
             on_success: ''
@@ -523,11 +608,12 @@ Commands:
         show:
             on_help: ' &b/clan info [tag] &7-&e Mostrar información del clan.'
             on_help_json:
-              hover_text: '&aHaz clic para ver la información del clan.'
+              hover_text: '&aHaga clic para ver la información de Clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan info'
+              click_action: '/clan info '
             on_success: ''
-            on_error: '%tag% &cUse &b/clan info [tag]'
+            on_error: '%tag% &cError al usar la información.'
+            on_usage: '%tag% &cUsa &b/clan info [tag]'
         sound:
             on_help: ''
             on_success: ''
@@ -538,15 +624,16 @@ Commands:
       stats:
         permission: 'uclans.player.stats'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'estado'
+        alias: 'status'
         show:
-            on_help: ' &b/clan stats [tag] &7-&e Muestra las estadísticas del Clan.'
+            on_help: ' &b/clan stats [tag] &7-&e Mostrar estadísticas del Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para mostrar las estadísticas.'
+              hover_text: '&aHaga clic para mostrar las estadísticas.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan stats [tag]'
-            on_success: ''
-            on_error: '%tag% &cUse &b/clan stats [tag]'
+            on_success: '%tag% &aÉxito en el uso de las estadísticas.'
+            on_error: '%tag% &cError al usar las estadísticas.'
+            on_usage: '%tag% &cUsa &b/clan stats [tag]'
         sound:
             on_help: ''
             on_success: ''
@@ -554,18 +641,19 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      perfil:
+      profile:
         permission: 'uclans.player.profile'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'perfil'
         show:
-            on_help: ' &b/clan profile [jugador] &7-&e Mostrar el perfil del jugador.'
+            on_help: ' &b/clan profile [player] &7-&e Mostrar el perfil del jugador.'
             on_help_json:
               hover_text: '&aHaga clic para mostrar el perfil.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan profile [player]'
-            on_success: ''
-            on_error: '%tag% &cUse &b/perfil del clan [jugador]'
+            on_success: '%tag% &aÉxito en el uso del perfil.'
+            on_error: '%tag% &cError al utilizar el perfil.'
+            on_usage: '%tag% &cUsa &b/clan profile [player]'
         sound:
             on_help: ''
             on_success: ''
@@ -578,7 +666,7 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: ''
         show:
-            on_help: ' &8Rival y Aliado: &6[?]'
+            on_help: ' &8Rival y aliado: &6[?]'
             on_help_json:
               hover_text: '&aDescripción de rivales y aliados.'
               click_type: ''
@@ -588,13 +676,14 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'rival'
         show:
-            on_help: ' &b/clan rival <add/remove> <tag> &7-&e Add Clan ro rival.'
+            on_help: ' &b/clan rival <add/remove> <tag> &7-&e Añadir Clan a los rivales.'
             on_help_json:
-              hover_text: '&aHaz clic para añadir/eliminar un rival del Clan.'
+              hover_text: '&aHaz clic para añadir/eliminar un rival del clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan rival <add/remove> <tag> '
-            on_success: '%tag% &eLista de rivalidades se actualiza.'
-            on_error: '%tag% &cUse &b/clan rival <add/remove> <tag> '
+            on_success: '%tag% &eSe actualiza la lista de rivalidades.'
+            on_error: '%tag% &cError en el uso del rival.'
+            on_usage: '%tag% &cUsa &b/clan rival <add/remove> <tag> '
         sound:
             on_help: ''
             on_success: ''
@@ -602,18 +691,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aRival added/removed.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aYou added/removed the ally.'
+            on_error: '&cError, Inténtalo de nuevo...'
       rivalries:
         permission: 'uclans.player.rivalries'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'rivalidades'
         show:
-            on_help: ' &b/clan rivalidades &7-&e Lista de rivalidades'
+            on_help: ' &b/clan rivalries &7-&e Lista de rivalidades'
             on_help_json:
-              hover_text: '&aClick para listar rivalidades Clan.'
+              hover_text: '&aHaga clic para ver la lista de rivalidades del Clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan rival '
-            on_success: ''
-            on_error: '%tag% &cUse &b/clan rival <add/remove> <tag> '
+              click_action: '/clan rivalries '
+            on_success: '%tag% &aÉxito en el uso de las rivalidades.'
+            on_error: '%tag% &cError al usar las rivalidades.'
+            on_usage: '%tag% &cUsa &b/clan rivalries'
         sound:
             on_help: ''
             on_success: ''
@@ -621,18 +719,19 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      aliado:
+      ally:
         permission: 'uclans.player.ally'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'aliado'
         show:
-            on_help: ' &b/clan ally <add/remove> <tag> &7-&e Añadir Clan como aliado.'
+            on_help: ' &b/clan ally <add/remove/accept/deny> <tag> &7-&e Añadir un clan como aliado.'
             on_help_json:
-              hover_text: '&aHaz clic para añadir/quitar un aliado del Clan.'
+              hover_text: '&aHaz clic para añadir/eliminar un aliado del clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/clan ally <add/remove> <tag> '
-            on_success: '%tag% &eLista de alianzas se actualiza.'
-            on_error: '%tag% &cUse &b/clan ally <add/remove> <tag> '
+              click_action: '/clan ally <add/remove/accept/deny> <tag> '
+            on_success: '%tag% &eLista de alianzas actualizada.'
+            on_error: '%tag% &cError en el uso de aliados.'
+            on_usage: '%tag% &cUsa &b/clan ally <add/remove/accept/deny> <tag> '
         sound:
             on_help: ''
             on_success: ''
@@ -640,18 +739,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      alianzas:
+        title:
+            on_help: ''
+            on_success: '&aAliado añadido/eliminado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aAñadiste/quitaste el aliado.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      alliances:
         permission: 'uclans.player.alliances'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'aliancas'
         show:
             on_help: ' &b/clan alliances &7-&e Lista de alianzas.'
             on_help_json:
-              hover_text: '&aClick para listar alianzas de Clan.'
+              hover_text: '&aHaga clic para ver la lista de alianzas de Clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan alliances '
-            on_success: ''
-            on_error: '%tag% &cUse &b/clan alliances '
+            on_success: '%tag% &aÉxito en el uso de alianzas.'
+            on_error: '%tag% &cError en el uso de las alianzas.'
+            on_usage: '%tag% &cUsa &b/clan alliances '
         sound:
             on_help: ''
             on_success: ''
@@ -659,18 +767,19 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      miembros:
+      members:
         permission: 'uclans.player.members'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'membros'
         show:
-            on_help: ' &b/miembros del clan &7-&e Muestra la lista de miembros.'
+            on_help: ' &b/clan members &7-&e Shows the list of members.'
             on_help_json:
-              hover_text: '&aHaga clic para ver.'
+              hover_text: '&aClick to view.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/clan members'
-            on_success: '%tag% &aEstás viendo la lista de miembros'
-            on_error: '%tag% &cUse &6/clan members'
+            on_success: '%tag% &aSuccess to use members.'
+            on_error: '%tag% &cError to use members.'
+            on_usage: '%tag% &cUse &6/clan members'
         sound:
             on_help: ''
             on_success: ''
@@ -683,23 +792,24 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: ''
         show:
-            on_help: ' &8Tierra del clan: &6[?]'
+            on_help: ' &8Terrenos del Clan: &6[?]'
             on_help_json:
-              hover_text: '&aComandos de tierra.'
+              hover_text: '&aComando de Terrenos.'
               click_type: ''
               click_action: ''
-      tierra:
+      land:
         permission: ''
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'land'
+        alias: 'terrenos'
         show:
             on_help: ' &6/land &7-&6 Muestra las opciones de terreno.'
             on_help_json:
-              hover_text: '&aHaga clic para ver.'
+              hover_text: '&aHaz clic para ver.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/land'
-            on_success: '%tag% &aEstás viendo las opciones de tierra'
-            on_error: '%tag% &cUse &6/land'
+            on_success: '%tag% &aUsted está viendo las opciones de terreno'
+            on_error: '%tag% &cError de uso del terreno.'
+            on_usage: '%tag% &cUsa &6/land'
         sound:
             on_help: ''
             on_success: ''
@@ -715,7 +825,7 @@ Commands:
         show:
             on_help: ' &8Hologramas: &6[?]'
             on_help_json:
-              hover_text: '&aDescripción del holograma.'
+              hover_text: '&aDescripcion de Hologramas.'
               click_type: ''
               click_action: ''
       spawnholo:
@@ -723,13 +833,14 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'spawnholo'
         show:
-            on_help: ' &a/uclan spawnholo &7-&e Spawn holo stats.'
+            on_help: ' &a/uclan spawnholo &7-&e Spawnear el HoloStats.'
             on_help_json:
-              hover_text: '&aHaz clic para generar HoloEstadísticas.'
+              hover_text: '&aHaga clic para que aparezca el HoloStats.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan spawnholo'
-            on_success: '%tag% &eHolograma con estadísticas ha aparecido.'
-            on_error: '%tag% &cUse &a/uclan spawnholo'
+            on_success: '%tag% &eEl HoloStats ha aparecido.'
+            on_error: '%tag% &cError al generar el holograma.'
+            on_usage: '%tag% &cUsa &a/uclan spawnholo'
             raw_base_color: 'GREEN'
         sound:
             on_help: ''
@@ -738,18 +849,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aHolograma Spawneado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas spawneado el holograma.'
+            on_error: '&cError, Inténtalo de nuevo...'
       despawnholo:
         permission: 'uclans.admin.despawnholo'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'spawnholo'
+        alias: 'despawnholo'
         show:
-            on_help: ' &a/uclan despawnholo &7-&e Spawn holo stats.'
+            on_help: ' &a/uclan despawnholo <id> &7-&e desactivar HoloStats.'
             on_help_json:
-              hover_text: '&aHaga clic para despawn HoloStats.'
+              hover_text: '&aHaz clic para desactivar HoloStats.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/uclan despawnholo'
-            on_success: '%tag% &eHolograma con Estadísticas ha despawned.'
-            on_error: '%tag% &cUse &a/uclan despawnholo'
+              click_action: '/uclan despawnholo <id>'
+            on_success: '%tag% &eEl HoloStats ha desaparecido.'
+            on_error: '%tag% &cError al eliminar el HoloStats.'
+            on_usage: '%tag% &cUse &a/uclan despawnholo <id>'
             raw_base_color: 'GREEN'
         sound:
             on_help: ''
@@ -758,18 +878,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aDeSpawn Hologram.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aYou despawned the hologram.'
+            on_error: '&cError, Inténtalo de nuevo...'
       listholos:
         permission: 'uclans.admin.listholos'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'listholos'
         show:
-            on_help: ' &a/uclan listholos &7-&e Listar todos los holos.'
+            on_help: ' &a/uclan listholos &7-&e Lista de todos los hologramas.'
             on_help_json:
-              hover_text: '&aHaz clic para listar todos los holos.'
+              hover_text: '&aLista de todos los HoloStats.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan listholos'
-            on_success: ''
-            on_error: '%tag% &cUse &a/uclan listholos'
+            on_success: '%tag% &aExito al usar listholos.'
+            on_error: '%tag% &cError al usar listholos.'
+            on_usage: '%tag% &cUsa &a/uclan listholos'
             raw_base_color: 'GREEN'
         sound:
             on_help: ''
@@ -783,13 +912,14 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'tpholo'
         show:
-            on_help: ' &a/uclan tpholo <id> &7-&e Teletransporte a holograma.'
+            on_help: ' &a/uclan tpholo <id> &7-&e Teletransporte al holograma.'
             on_help_json:
               hover_text: '&aHaz clic para teletransportarte.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan tpholo <id>'
-            on_success: '%tag% &eSe ha teletransportado al holograma.'
-            on_error: '%tag% &cUsa &a/uclan tpholo <id>'
+            on_success: '%tag% &eHas sido teletransportado al holograma.'
+            on_error: '%tag% &cError al teletransportarse al holograma.'
+            on_usage: '%tag% &cUsa &a/uclan tpholo <id>'
             raw_base_color: 'GREEN'
         sound:
             on_help: ''
@@ -798,18 +928,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aTeletransportado al holograma.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas sido teletransportado al holograma.'
+            on_error: '&cError, Inténtalo de nuevo...'
       reloadholos:
         permission: 'uclans.admin.reloadholos'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'reloadholos'
         show:
-            on_help: ' &a/uclan reloadholos &7-&e Recargar holograma.'
+            on_help: ' &a/uclan reloadholos &7-&e Recarga los hologramas.'
             on_help_json:
-              hover_text: '&aHaz clic para recargar hologramas.'
+              hover_text: '&aHaga clic para recargar los hologramas.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan reloadholos'
             on_success: '%tag% &eHologramas recargados'
-            on_error: '%tag% &cUse &a/uclan reloadholos'
+            on_error: '%tag% &cError de recarga de hologramas.'
+            on_usage: '%tag% &cUsa &a/uclan reloadholos'
             raw_base_color: 'GREEN'
         sound:
             on_help: ''
@@ -818,6 +957,14 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aHologramas recargados.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas recargado los hologramas.'
+            on_error: '&cError, Inténtalo de nuevo...'
       separer1:
         permission: ''
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -825,7 +972,7 @@ Commands:
         show:
             on_help: ' &8Plugin: &6[?]'
             on_help_json:
-              hover_text: '&aDescripción del plugin.'
+              hover_text: '&aDescripción del plugins.'
               click_type: ''
               click_action: ''
       help:
@@ -833,13 +980,14 @@ Commands:
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'ajuda'
         show:
-            on_help: ' &4/uclan help &7-&e Muestra el menú de ayuda.'
+            on_help: ' &4/uclan help &7-&e Mostrar el menú de ayuda.'
             on_help_json:
               hover_text: '&aHaz clic para ver la ayuda de Clanes.'
               click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/uclan help'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al mostrar el texto.'
+            on_success: '%tag% &aÉxito en el uso de la ayuda.'
+            on_error: '%tag% &cError al utilizar la ayuda'
+            on_usage: '%tag% &cError usa &b/uclan help'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -848,26 +996,48 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-        título:
+        title:
             on_help: ''
             on_success: ''
             on_error: ''
-        barra de acción:
+        actionbar:
             on_help: ''
             on_success: ''
             on_error: ''
+      openchest:
+        permission: 'uclans.admin.openchest'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'openchest'
+        show:
+            on_help: ' &4/uclan openchest <tag> &7-&e Abrir el cofre del clan.'
+            on_help_json:
+              hover_text: '&aHaz clic para abrir el cofre del clan'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan openchest <tag>'
+            on_success: '%tag% &aHas abierto el cofre del clan.'
+            on_error: '%tag% &cHubo un error al abrir el cofre del clan..'
+            on_usage: '%tag% &cUsa &4/uclan openchest <tag>'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
       globalff:
         permission: 'uclans.admin.globalff'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'deletar'
+        alias: 'globalff'
         show:
-            on_help: ' &4/uclan globalff &7-&e Cambiar una ff global.'
+            on_help: ' &4/uclan globalff &7-&e Modificar globalmente el ff.'
             on_help_json:
-              hover_text: '&aClick cambiar FF global'
+              hover_text: '&aClick para Modificar globalmente el FF'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan globalff'
-            on_success: '%tag% &aHas cambiado un ff global a &b%globalff%'
-            on_error: '%tag% &cUsa &4/uclan globalff'
+            on_success: '%tag% &aAs Modificado globalmente el ff to &b%globalff%'
+            on_error: '%tag% &cError al usar global ff.'
+            on_usage: '%tag% &cUsa &4/uclan globalff'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -876,18 +1046,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      borrar:
+        title:
+            on_help: ''
+            on_success: '&aGlobal FF Modificado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aAs Modificado globalmente el FF.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      delete:
         permission: 'uclans.admin.delete'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'deletar'
         show:
-            on_help: ' &4/uclan delete <tag> &7-&e Eliminar un nuevo Clan.'
+            on_help: ' &4/uclan delete <tag> &7-&e Borrar un nuevo Clan.'
             on_help_json:
-              hover_text: '&aHaz clic para eliminar un Clan.'
+              hover_text: '&aHaz clic para eliminar un clan.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan delete <tag>'
-            on_success: '%tag% &a¡Has borrado un clan!'
-            on_error: '%tag% &cUse &4/uclan delete <tag>'
+            on_success: '%tag% &a¡Has eliminado un clan!'
+            on_error: '%tag% &cError al borrar el clan.'
+            on_usage: '%tag% &cUsa &4/uclan delete <tag>'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -896,18 +1075,56 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      verificar:
+        title:
+            on_help: ''
+            on_success: '&aClan eliminado.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas eliminado el Clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      forcejoin:
+        permission: 'uclans.admin.forcejoin'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'forcejoin'
+        show:
+            on_help: ' &4/uclan forcejoin <player> <tag> &7-&e Agrega un jugador a un clan.'
+            on_help_json:
+              hover_text: '&aHaz clic para añadir un jugador a un clan.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan forcejoin <player> <tag>'
+            on_success: '%tag% &a¡Has añadido al jugador!'
+            on_error: '%tag% &cError al añadir el jugador.'
+            on_usage: '%tag% &cUsa &4/uclan forcejoin <player> <tag>'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aJugador Añadido.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas añadido al jugador.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      verify:
         permission: 'uclans.admin.verify'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'verificar'
         show:
-            on_help: ' &4/uclan verify <tag> &7-&e Verificar un Clan.'
+            on_help: ' &4/uclan verify <tag> &7-&e Verificar un clan.'
             on_help_json:
-              hover_text: '&aHaz clic para verificar un Clan.'
+              hover_text: '&aHaga clic para verificar un Clan.'
               click_type: 'SUGGEST_COMMAND'
-              click_action: '/uclan verificar <tag>'
-            on_success: '%tag% &a¡Has verificado un clan!'
-            on_error: '%tag% &cUse &4/uclan verify <tag>'
+              click_action: '/uclan verify <tag>'
+            on_success: '%tag% &aHas activado la verificación del clan.'
+            on_error: '%tag% &cError al comprobar el clan.'
+            on_usage: '%tag% &cUsa &4/uclan verify <tag>'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -916,18 +1133,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aVerificación del clan.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aAs verificado el Clan.'
+            on_error: '&cError, Inténtalo de nuevo...'
       reload:
         permission: 'uclans.admin.reload'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
         alias: 'recarregar'
         show:
-            on_help: ' &4/uclan reload &7-&e Recarga el plugin.'
+            on_help: ' &4/uclan reload &7-&e Recargar el plugin.'
             on_help_json:
-              hover_text: '&aHaga clic para recargar las configuraciones del plugin.'
+              hover_text: '&aHaga clic para recargar la configuracion del plugin.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan reload'
-            on_success: '%tag% &ePlugin reloaded.'
-            on_error: '%tag% &cUse &4/uclan reload'
+            on_success: '%tag% &ePlugin Recargado.'
+            on_error: '%tag% &cError en la recarga de las configuraciones.'
+            on_usage: '%tag% &cUsa &4/uclan reload'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -936,6 +1162,14 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aConfiguraciones recargadas.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas recargado las configuraciónes.'
+            on_error: '&cError, Inténtalo de nuevo...'
       separer3:
         permission: ''
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
@@ -943,21 +1177,22 @@ Commands:
         show:
             on_help: ' &8Regiones: &6[?]'
             on_help_json:
-              hover_text: 'Comandos de &aRegiones.'
+              hover_text: '&aComandos de regiones.'
               click_type: ''
               click_action: ''
       wand:
         permission: 'uclans.admin.wand'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'wand'
+        alias: 'varinha'
         show:
             on_help: ' &5/uclan wand &7-&e Recibe una varita.'
             on_help_json:
-              hover_text: '&aHaz clic para recibir una varita.'
+              hover_text: '&aHaga clic para recibir una varita.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan wand'
             on_success: '%tag% &aHas recibido una varita.'
-            on_error: '%tag% &cHa ocurrido un error al recibir la varita'
+            on_error: '%tag% &cSe ha producido un error al recibir la varita'
+            on_usage: '%tag% &cError usa &b/uclan wand'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -966,18 +1201,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aWand received.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aYou received the wand.'
+            on_error: '&cError, Inténtalo de nuevo...'
       clearwand:
         permission: 'uclans.admin.clearwand'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'clearwand'
+        alias: 'limparvarinha'
         show:
-            on_help: ' &5/uclan clearwand &7-&e Limpia los puntos de la varita'
+            on_help: ' &5/uclan clearwand &7-&e Limpiar los puntos de las varitas'
             on_help_json:
-              hover_text: '&aHaz clic para limpiar los puntos de la varita.'
+              hover_text: '&aHaga clic para limpiar los punos de la varita.'
               click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/uclan clearwand'
-            on_success: '%tag% &a¡Su varita se ha limpiado!'
-            on_error: '%tag%&cError al limpiar la varita.'
+            on_success: '%tag% &a¡Su varita fue limpiada!'
+            on_error: '%tag% &cError al limpiar la Varita.'
+            on_usage: '%tag% &cError usa &b/uclan clearwand.'
         sound:
             on_help: ''
             on_success: ''
@@ -985,18 +1229,27 @@ Commands:
             extra:
               volume: 10
               pitch: 1
-      expandir:
+        title:
+            on_help: ''
+            on_success: '&aVarita limpiada.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas limpiado la varita.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      expand:
         permission: 'uclans.admin.expand'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'expand'
+        alias: 'expandir'
         show:
-            on_help: ' &5/uclan expand &7-&e Expande los valores establecidos.'
+            on_help: ' &5/uclan expand &7-&e Amplía los valores del conjunto.'
             on_help_json:
-              hover_text: '&aClick to Expande los valores del conjunto.'
+              hover_text: '&aHaga clic para ampliar los valores establecidos.'
               click_type: 'SUGGEST_COMMAND'
               click_action: '/uclan expand'
-            on_success: '%tag% &aHas expandido la región.'
-            on_error: '%tag% &cError, use &5/uclan expand <VALUE> <VALUE>'
+            on_success: '%tag% &aHas ampliado la región.'
+            on_error: '%tag% &cError con los Puntos de expansión.'
+            on_usage: '%tag% &cError, usa &5/uclan expand <VALUE> <VALUE>'
             raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
@@ -1005,20 +1258,28 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aVarita expandida.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas ampliado la varita.'
+            on_error: '&cError, Inténtalo de nuevo...'
       addregion:
         permission: 'uclans.admin.addregion'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'addregion'
+        alias: 'adicionarregion'
         show:
             raw_base_color: 'YELLOW'
-            on_help: ' &5/uclan addregion <nombre> &7-&e Añade una región.'
+            on_help: ' &5/uclan addregion <name> &7-&e Añade una región.'
             on_help_json:
-              hover_text: '&aHaga clic para sho estado.'
+              hover_text: '&aClick to sho status.'
               click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/uclan addregion <name>'
             on_success: '%tag% &eNueva región creada con éxito.'
-            on_error: '%tag% &cHa habido un error al crear la región, por favor, inténtalo de nuevo.'
-            on_usage: '%tag% &cError, use &b/uclan addregion <nombre>'
+            on_error: '%tag% &cHubo un error al crear la región, Inténtalo de nuevo.'
+            on_usage: '%tag% &cError, usa &b/uclan addregion <name>'
         sound:
             on_help: ''
             on_success: ''
@@ -1026,20 +1287,28 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aRegion añadida.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas añadido la región.'
+            on_error: '&cError, Inténtalo de nuevo...'
       removeregion:
         permission: 'uclans.admin.removeregion'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'removeregion'
+        alias: 'removerregion'
         show:
             raw_base_color: 'YELLOW'
-            on_help: ' &5/uclan removeregion <nombre> &7-&e Elimina una región.'
+            on_help: ' &5/uclan removeregion <name> &7-&e Elimina una región.'
             on_help_json:
-              hover_text: '&aHaz clic para sho estado.'
+              hover_text: '&aHaga clic para mostrar el estado.'
               click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/uclan removeregión <nombre>'
+              click_action: '/uclan removeregion <name>'
             on_success: '%tag% &eLa región ha sido eliminada con éxito.'
-            on_error: '%tag% &cHa habido un error al borrar la región.'
-            on_usage: '%tag% &cError, use &b/uclan removeregion <nombre>'
+            on_error: '%tag% &cHubo un error al borrar la región.'
+            on_usage: '%tag% &cError, usa &b/uclan removeregion <name>'
         sound:
             on_help: ''
             on_success: ''
@@ -1047,20 +1316,28 @@ Commands:
             extra:
               volume: 10
               pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aRegión eliminada.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHa eliminado la región.'
+            on_error: '&cError, Inténtalo de nuevo...'
       listregions:
         permission: 'UClans.admin.listregions'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'listregions'
+        alias: 'listarregions'
         show:
             raw_base_color: 'YELLOW'
-            on_help: ' &5/uclan listregions &7-&e Lista las regiones guardadas.'
+            on_help: ' &5/uclan listregions &7-&e Lista de regiones guardadas.'
             on_help_json:
               hover_text: '&aHaga clic para mostrar las arenas guardadas.'
               click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
               click_action: '/uclan listregions'
-            on_success: '%tag% &aEstás viendo la ayuda!'
-            on_error: '%tag%&cError al listar.'
-            on_usage: '%tag% &cError, use &b/uclan listregions'
+            on_success: '%tag% &a¡estás viendo la ayuda!'
+            on_error: '%tag%&cError en la lista.'
+            on_usage: '%tag% &cError, usa &b/uclan listregions'
         sound:
             on_help: ''
             on_success: ''
@@ -1071,17 +1348,140 @@ Commands:
       tpregion:
         permission: 'UClans.admin.listregions'
         no_permission_message: '%tag% &cNo tienes permiso para esto.'
-        alias: 'tpregion'
+        alias: 'teleportarregion'
         show:
             raw_base_color: 'YELLOW'
-            on_help: ' &5/uclan tpregion <nombre> &7-&e Teletransporta a una región.'
+            on_help: ' &5/uclan tpregion <name> &7-&e Teletransporte a una región.'
             on_help_json:
               hover_text: '&aHaz clic para teletransportarte a una región.'
               click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
-              click_action: '/uclan tpregion <nombre>'
-            on_success: '%tag% &a¡Has sido teletransportado a la región!'
-            on_error: '%tag% &cSe ha producido un error al teletransportarse, comprueba si el mundo existe o la ubicación no es inválida'
-            on_usage: '%tag% &cError, usa &b/uclan tpregion <nombre>'
+              click_action: '/uclan tpregion <name>'
+            on_success: '%tag% &a¡Te as teletransportado a la región!'
+            on_error: '%tag% &cSe ha producido un error al teletransportarse, compruebe si el mundo existe o la ubicación no es inválida'
+            on_usage: '%tag% &cError, usa &b/uclan tpregion <name>'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: '&aTeletransportado a la región.'
+            on_error: '&cError!%nl%&cInténtalo de nuevo...'
+        actionbar:
+            on_help: ''
+            on_success: '&aHas sido teletransportado a la región.'
+            on_error: '&cError, Inténtalo de nuevo...'
+      separer3:
+        permission: ''
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: ''
+        show:
+            on_help: ' &8Arenas: &6[?]'
+            on_help_json:
+              hover_text: '&aComandos de arenas.'
+              click_type: ''
+              click_action: ''
+      addarena:
+        permission: 'uclans.admin.addarena'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'addarena'
+        show:
+            on_help: ' &7/uclan addarena <name> &7-&e Añadir una arena.'
+            on_help_json:
+              hover_text: '&aHaz clic para añadir una arena.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan addarena <name>'
+            on_success: '%tag% &aArena fue creada con éxito, utilice &b/uclan setpoint <arena> <point> &apara fijar los puntos de la arena..'
+            on_error: '%tag% &cHubo un error al añadir la arena'
+            on_usage: '%tag% &cError usa &b/uclan addarena <name>'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+      removearena:
+        permission: 'uclans.admin.removearena'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'removearena'
+        show:
+            on_help: ' &7/uclan removearena <name> &7-&e Eliminar una arena.'
+            on_help_json:
+              hover_text: '&aHaga clic para eliminar una arena.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan removearena <name>'
+            on_success: '%tag% &a¡Arena eliminada con éxito!.'
+            on_error: '%tag% &cHubo un error al eliminar la arena'
+            on_usage: '%tag% &cError usa &b/uclan removearena <name>'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+      listarenas:
+        permission: 'uclans.admin.listarenas'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'listarenas'
+        show:
+            on_help: ' &7/uclan listarenas &7-&e Listado de arenas.'
+            on_help_json:
+              hover_text: '&aHaga clic para ver la lista de arenas.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan listarenas'
+            on_success: '%tag% &aExito!.'
+            on_error: '%tag% &cSe ha producido un error al enumerar las arenas'
+            on_usage: '%tag% &cError usa &b/uclan listarenas'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+      setpoint:
+        permission: 'uclans.admin.setpoint'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'setpoint'
+        show:
+            on_help: ' &7/uclan setpoint <arena> <SPAWN1|SPAWN2|EXIT|LOBBY> &7-&e Establecer &elos puntos de la arena.'
+            on_help_json:
+              hover_text: '&aHaz clic para fijar los puntos de la arena.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan setpoint <arena> <SPAWN1|SPAWN2|EXIT|LOBBY>'
+            on_success: '%tag% &aEl punto &b%point% &ade la arenas &b%arena_name% &ase ha guardado con éxito en tu ubicación.'
+            on_error: '%tag% &cAn error occurred while saving point, Inténtalo de nuevo.'
+            on_usage: '%tag% &cError usa &b/uclan setpoint <arena> <SPAWN1|SPAWN2|EXIT|LOBBY>'
+            raw_base_color: 'DARK_RED'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+      togglearena:
+        permission: 'uclans.admin.togglearena'
+        no_permission_message: '%tag% &cNo tienes permiso para esto.'
+        alias: 'togglearena'
+        show:
+            on_help: ' &7/uclan togglearena <name> &7-&e alternar los puntos de la arena.'
+            on_help_json:
+              hover_text: '&aClick to set the arena points.'
+              click_type: 'SUGGEST_COMMAND'
+              click_action: '/uclan togglearena <name>'
+            on_success: '%tag% &eThe arena is now %arena_enabled%'
+            on_error: '%tag% &cLa arena no se puede cambiar, comprueba los puntos con &b/uclan setpoint %arena_name% <point>'
+            on_usage: '%tag% &cError usa &b/uclan togglearena <name>'
+            raw_base_color: 'DARK_RED'
         sound:
             on_help: ''
             on_success: ''

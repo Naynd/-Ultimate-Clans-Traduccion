@@ -1,17 +1,16 @@
 #
 #Placeholders with PlaceholderAPI:
+#CLAN
 # %uclans_hasclan%
 # %uclans_hasclan_formated%
 # %uclans_tag_nocolor%
 # %uclans_tag_color%
 # %uclans_tag_formated%
-# %uclans_tag_formated_level%
-# %uclans_level_identifier%
 # %uclans_desc_nocolor%
 # %uclans_desc_color%
 # %uclans_leader%
 # %uclans_creation_date%
-# %creation_date_formated%
+# %uclans_creation_date_formated%
 # %uclans_clanid%
 # %uclans_clan_kills%
 # %uclans_clan_deaths%
@@ -20,12 +19,28 @@
 # %uclans_clan_home%
 # %uclans_clan_members%
 # %uclans_clan_onlinemembers%
+# %uclans_count_onlinemembers%
+# %uclans_clan_ally%
+# %uclans_clan_rival%
+# %uclans_count_members%
+# %uclans_name%
+# %uclans_leader%
+# %uclans_verified%
+#PLAYER
+# %uclans_player%
+# %uclans_player_name%
 # %uclans_player_kills%
 # %uclans_player_deaths%
 # %uclans_player_souls%
-# %uclans_player_kd%
-# %uclans_count_members%
-# %uclans_name%
+# %uclans_player_kdr%
+# %uclans_level_identifier%
+# %uclans_tag_formated_level%
+# %uclans_player_joindate%
+# %uclans_player_joindate_formated%
+# %uclans_player_lastsee%
+# %uclans_player_lastsee_formated%
+# %uclans_player_leader_yes_no%
+# %uclans_player_mod_yes_no%
 
 Plugin:
   check-for-updates: true
@@ -47,23 +62,33 @@ Config:
   tag: '&6&lU&a&lClans &8>>'
   date-format: 'dd/MM/yyyy HH:mm'
   debug_errors: false
+  disable_command_chat_interactions: false
   confirm: 'CONFIRM' # use '' to disable confirmation
   confirm_case_sensitive: true #If true use CONFIRM or false use in any order like CoNFirm
   teleport_delay: 3
   aliases_tabcomplete: true
   commands_tabcomplete: true
+  help_max_result: 11
   logs:
     clan: true
     stacktrace: true
+
+War:
+  amount_format: '1|2|3|5|10|64'
+  allowed_commands:
+  - '/clan'
+  - '/uclan'
+  - '/.'
+  - '/clanchat'
 
 Hologram:
   enabled: true
   prefix: 'uc_'
   maxlist: 10
   ajust-Y: 2.0
-  header: '&d&lTop 10 Clanes'
-  footer: '&eFor more use &b/clan list'
-  format: '&6&l%num%° &7- &a%clan_tag% &7- %clan_members_size% miembros &7- &b%clan_kills%&8/&b%clan_deaths% &8(%clan_kdr%)'
+  header: '&d&lTop 10 Clans'
+  footer: '&ePara mas usa &b/clan list'
+  format: '&6&l%num%° &7- &a%uclans_tag_color% &7- %uclans_count_members% member(s) &7- &b%uclans_clan_kills%&8/&b%uclans_clan_deaths% &8(%uclans_clan_kdr%)'
   tasks:
     holosave_start: 300 #IN SECONDS
     holosave: 300 #IN SECONDS
@@ -72,13 +97,20 @@ Hologram:
     holospawnafter: 5 #IN TICKS (20 TICKS = 1 SECOND, RECOMENDED 5~10)
 
 Cosmetic:
-  item:
+  item: # to disable cosmetics use item: {}
     material: 'STAINED_GLASS_PANE'
     data: 7
     amount: 1
     name: ' '
     flags:
     - 'HIDE_ENCHANTS'
+    enchants:
+    - ''
+    nbt: #This can be used on all items in this file, To not use just erase this part.
+      string:
+      - 'NbtExample:teste'
+      int:
+      - 'NbtExample2:0001'
 
 Wand:
   item:
@@ -89,10 +121,10 @@ Wand:
     lore:
     - ' '
     - ' &eEste elemento debe utilizarse para marcar'
-    - '&eregion puntos para la región.'
+    - '&ePuntos de región para la región.'
     - ' '
-    - ' &bClic izquierdo &7para marcar el punto &b#1'
-    - '&b Clic derecho &7para marcar el punto &b#2'
+    - ' &bCLIC-IZQUIERDO &7para marcar el punto &b#1'
+    - ' &bCLIC-DERECHO &7para marcar el punto &b#2'
     sound: ''
     flags:
     - HIDE_ENCHANTS
@@ -105,30 +137,51 @@ Gui:
   noclan: 'index_noclan'
 
 Clan:
+  disable_allypvp_onff: true
+  disable_shared_chat_ally: false
   disabled_command_worlds: #Worlds where clan commands are disabled between members of the same clan.
   - 'disabled_worlds'
   forced_ff_worlds: #Worlds where friendly fire is always active between members of the same clan.
   - 'disabled_worlds'
   forced_ff_regions: #Regions where friendly fire is always active between members of the same clan.
   - 'worlds'
+  war_invite:
+    max_time_seconds: 60 #IN SECONDS
+  ally_invite:
+    max_time_seconds: 60 #IN SECONDS
   invite:
     max_time_seconds: 60 #IN SECONDS
-    allowed_chars: "[0-9a-zA-Z\\-'_]*"
+    allowed_chars: "[0-9a-zA-Z_\\-]*"
+  join_leave_clan:
+    delay: 1 # IN SECONDS
+    join_commands: #example commands, Only %clantag% and %player% can be used here
+    - 'lp user %player% permission set uclans.clan'
+    - 'uking addcoin %clantag% 500'
+    leave_commands: #example commands, Only %clantag% and %player% can be used here
+    - 'lp user %player% permission unset uclans.clan'
   chat:
     format: ' &d%uclans_level_identifier% &5%player%&d: &d%chat_message%' #Any placeholder can be used with PAPI.
   verify:
-    always_verified: true
+    always_verified: false
+    list_unverified: false
   kills: #points added to the clan and player KDR when the events below occur, (kills/deaths = ratio)
     neutral: 1
     ally: 0
     rival: 3
   match:
     rival:
-      add: 'add'
-      remove: 'remove'
+      add: 'añadir'
+      remove: 'remover'
     ally:
-      add: 'add'
-      remove: 'remove'
+      add: 'añadir'
+      remove: 'remover'
+      accept: 'aceptar'
+      deny: 'declinar'
+    war:
+      send: 'enviar'
+      accept: 'aceptar'
+      deny: 'declinar'
+      join: 'entrar'
   prices:
     enabled: true #Default VAULT, if "false" does not charge player values.
     desc: 0.0
@@ -149,6 +202,8 @@ Clan:
     togglechat: 0.0
     toggleff: 0.0
     name: 0.0
+    chest: 0.0
+    war: 100.0
   limits:
     amount_by_player: 2 #old method
     max_by_clan: 10 #Maximum players per clan
@@ -157,8 +212,8 @@ Clan:
       start: 5 #IN SECONDS
       next: 300 #IN SECONDS
     update_invite:
-      start: 300 #IN SECONDS
-      next: 600 #IN SECONDS
+      start: 60 #IN SECONDS
+      next: 60 #IN SECONDS
   level:
     leader:
       identifier: '&6**&r'
@@ -172,251 +227,25 @@ Clan:
     allow_color: true
     min_chars: 2
     max_chars: 8
-    allowed_chars: "[0-9a-zA-Z]*"
+    allowed_chars: "[0-9a-zA-Z_-]*"
     default_color: '&8'
     start: '&f['
     end: '&f]&r'
     noclan_formated: '&4SIN CLAN'
+    unicodeblock: '' # example, for russian character use 'CYRILLIC', all list in https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.UnicodeBlock.html
   desc:
     allow_color: true
     min_chars: 2
     max_chars: 64
-    allowed_chars: "[0-9a-zA-Z \\-'_]*"
+    allowed_chars: "[0-9a-zA-Z _-]*"
     default_color: '&8'
     nodesc_formated: '&8SIN DESC'
+    unicodeblock: '' # example, for russian character use 'CYRILLIC', all list in https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.UnicodeBlock.html
   name:
     allow_color: true
     min_chars: 2
     max_chars: 64
-    allowed_chars: "[0-9a-zA-Z \\-'_]*"
+    allowed_chars: "[0-9a-zA-Z _-]*"
     default_color: '&8'
     noname_formated: '&8SIN NOMBRE'
-
-Messages:
-  hologram:
-    disabled: '%tag% &cHologramas desactivados.'
-    not_exists: '%tag% &cEste holograma no existe'
-    teleported: '%tag% &eAs sido teleportado el holograma &b%id%'
-    header: '&d&lLista de hologramas:'
-    format_checked: ' &7&m%num%° &8&m- &7&m%id%&r &a&lOK'
-    format_unchecked: ' &a%num%° &7- &b%id% &7- &b%location% &8(%world%&8)'
-    footer: ''
-    empty: ' &cNo ay estado para mostrar.'
-    wait: ' &eespera....'
-  comum:
-    empty: ' '
-    player_kicked_out_toclan: '%tag% &4%player% &ha sido expulsado del clan por &a%clan_leader%'
-    player_kicked_out: '%tag% &eHas sido expulsado del clan &b%clan% &cpor &a%clan_leader%'
-    dont_mod_and_leader: '%tag% &cNo eres el líder o mod del clan.'
-    check_wand: '%tag% &cTienes que marcar los puntos antes de crear la región.'
-    region_dont_exists: '%tag% &cNo hay ninguna región con este nombre.'
-    region_exists: '%tag% &cYa existe una región con este nombre.'
-    invalid_characters: '%tag% &cEl nombre contiene caracteres no válidos.'
-    marked_point: '%tag% &ePunto &b#%point_number% &e ha marcado en &b%location%'
-    disable_region: '%tag% &cEsta ubicación no puede ser reclamada.'
-    very_close_another: '%tag% &cEl lugar que intentas reclamar está muy cerca de otra zona protegida.'
-    special_nopaste: '%tag% &cHa habido un error con esto, por favor, inténtalo de nuevo'
-    error_addchunk: '%tag% &c¡Ha ocurrido un error con esto, por favor notifique a un administrador!'
-    error_special_item: '%tag% &c¡Ha ocurrido un error con esto, por favor notifique a un administrador!'
-    error_special_item_command: '&cUsa &4/uclan item <jugador> <objeto> <importe>'
-    special_incooldown: '%tag% &e¡Espera %seg% seg para volver a usar esto!'
-    special_used: '%tag% &eHas usado un %item%'
-    special_noblocks: '%tag% &c¡El ítem no fue usado porque no tiene pero nada que limpiar!'
-    specialitem_received: '%tag% &eHas recibido &b%amount% %item%'
-    teleport_dont_move: '%tag% &ePreparando teleportación, no te muevas por %sec% seg.'
-    teleport_moved: '%tag% &c¡Te has movido y se ha cancelado el teletransporte!!!'
-    teleport_true: '%tag% &e¡Has sido teletransportado!'
-    cooldown_teleport: '%tag% &cEspera %time% seg. para volver a usarlo.'
-    dont_world_claim: '%tag% &cNo estás en un mundo de terreno.'
-    dont_place_item: '%tag% &cNo puedes usar este ítem.'
-    error_unclaimchunk: '%tag% &cHa habido un error al declamar este terreno.'
-    not_owner: '%tag% &cNo eres el propietario de este terreno.'
-    max_claimed: '%tag% &cYouve already claimed as many %max% terrains.'
-    chunk_has_notowner: '%tag% &cEste terreno no tiene dueño.'
-    chunk_has_owner: '%tag% &cEste terreno ya tiene dueño.'
-    dont_have_claim_clan: '%tag% &cEste clan no existe o no tiene tierras.'
-    location_blocked: '%tag% &cLa ubicación &b%coord% &está bloqueada para el teletransporte.'
-    dont_have_claim: '%tag% &cTu clan no tiene tierras.'
-    error_unclaimallchunk: '%tag% &cError in declaiming the lands.'
-    land_dont_break: '%tag% &cNo puedes romper aquí ...'
-    land_dont_place: '%tag% &cNo puedes construir aquí ...'
-    land_dont_edit: '%tag% &cNo puedes editar aquí ...'
-    survival_disabled: '%tag% &cModo de juego deshabilitado.'
-    action_removed: '%tag% &cTodas las acciones han sido eliminadas.'
-    action_disband_error: '%tag% &c¡No has introducido una confirmación y la acción ha sido cancelada!'
-    error_startaction: '%tag% &cHa habido un error al ejecutar esto.'
-    command_by_player: '%tag% &cEste comando debe ser usado por un jugador.'
-    command_by_console: '%tag% &cEste comando debe ser usado por la consola.'
-    disabled_world_command: '%tag% &cLos comandos están desactivados en este mundo.'
-    dont_money: '%tag% &cNecesitas &a$%amount% &cpara esto.'
-    debited_money: '%tag% &eSe ha cargado &a%amount% &e su cuenta.'
-    help_header: '&d&lAyuda con Clan:'
-    help_listregion_header: '&d&lLista de regiones:'
-    help_listregion_format: ' &b%region_name% &7- %region_creator% &7- &b%region_firstpoint%&7/&b%region_secondpoint%'
-    help_listregion_empty: '&8 - No hay regiones guardadas'
-    help_land_header: '&d&lAyuda a la tierra:'
-    help_clan_header: '&d&lAyuda a los clanes:'
-    help_uclan_header: '&4&lAyuda de clanes:'
-    help_profile_header: '&d&lPerfil de &a%player%&d&l:'
-    help_stats_header: '&d&lEstado del clan &a%clan_tag%&d&l:'
-    list_header: '&d&lLista de clanes: &8(rank/tag/desc/kdr/members)'
-    list_sub_header: ' &8Mostrando %cur%/%amount% del %total% (Página: %pag_cur%/%pag_max%)'
-    empty_list: ' &cNo hay Clan en esta lista.'
-    error_to_execute: '%tag% &cHa ocurrido un error, por favor inténtelo de nuevo.'
-    no_permission: '%tag% &cNo tienes permiso'
-    player_have_clan: '%tag% &cYa tienes un clan.'
-    player_donthave_clan: '%tag% &cNo tienes un clan.'
-    another_player_donthave_clan: '%tag% &cEste jugador no tiene clan.'
-    tag_in_use: '%tag% &cEste TAG ya está en uso.'
-    error_character: '%tag% &cEste TAG contiene caracteres no válidos.'
-    error_create: '%tag% &cError creating a new Clan, try again.'
-    error_delete: '%tag% &cError borrando el Clan, inténtalo de nuevo.'
-    error_sethome: '%tag% &cError al establecer el HOME del Clan, inténtalo de nuevo.'
-    dont_have_home: '%tag% &cTu Clan no tiene un hogar establecido.'
-    dont_leader: '%tag% &cNo eres el líder del Clan.'
-    hasglobal_ff: '%tag% &e¡El fuego amistoso global está ahora activado!'
-    clanpvp_disabled: '%tag% &cClan PVP está ahora desactivado.'
-    error_modtag: '%tag% &cError al cambiar el TAG del clan.'
-    error_moddesc: '%tag% &cError al cambiar la descripción del clan.'
-    clan_not_found: '%tag% &cEl clan con este TAG no existe.'
-    tag_equals: '%tag% &cNo se ha cambiado el TAG, parece ser el mismo.'
-    name_equals: '%tag% &cUnchanged NAME, parece ser el mismo.'
-    leave_is_leader: '%tag% &cEres el Líder del Clan, para dejarlo usa &b/clan disband&c y borrarás el Clan...'
-    error_leave: '%tag% &cError al dejar el Clan, inténtalo de nuevo.'
-    player_offline: '%tag% &c¡El jugador está desconectado o no existe!'
-    invited_has_clan: '%tag% &cEste jugador ya tiene un Clan.'
-    error_invite: '%tag% &cError invitando a un jugador, por favor inténtalo de nuevo.'
-    already_invite: '%tag% &cYa hay una invitación para este jugador.'
-    invite_expired: '%tag% &cSu invitación para unirse al Clan &f%clan_tag% &ce ha expirado.'
-    invite_donthave: '%tag% &cNo tienes invitaciones.'
-    invite_error_recuse: '%tag% &cError declinando invitación.'
-    invite_error_join: '%tag% &cError entering the clan, try again.'
-    dont_in_your_clan: '%tag% &cEste jugador no está en tu clan.'
-    error_kick: '%tag% &cError al patear al jugador.'
-    dont_kick_leader: '%tag% &cNo puedes expulsar al líder del clan.'
-    already_mod: '%tag% &cEste jugador ya es moderador.'
-    dont_mod: '%tag% &cEste jugador no es moderador.'
-    promote_error: '%tag% &cError al promocionar al jugador, inténtalo de nuevo...'
-    demote_error: '%tag% &cError demoting this player, try again ...'
-    dont_permission_to_kick: '%tag% &cNo puedes expulsar jugadores.'
-    dont_permission_to_promote: '%tag% &cNo puedes promocionar jugadores.'
-    is_leader: '%tag% &cEste jugador es el líder del clan.'
-    empty_chat_help: '%tag% &cError, Usa &b/. <mensaje>'
-    is_your_clan: '%tag% &cEste es tu Clan.'
-    already_rival: '%tag% &cEste Clan ya es un rival.'
-    is_ally: '%tag% &cEste Clan ya es un aliado.'
-    dont_rival: '%tag% &cEste Clan no es un rival.'
-    rival_add_error: '%tag% &cError al añadir rival.'
-    rival_remove_error: '%tag% &cError eliminando rival.'
-    already_ally: '%tag% &cEste Clan ya es un aliado.'
-    is_rival: '%tag% &cEste Clan ya es aliado.'
-    dont_ally: '%tag% &cEste Clan no es un aliado.'
-    ally_add_error: '%tag% &cError al añadir un aliado.'
-    ally_remove_error: '%tag% &cError eliminando aliado.'
-    max_members: '&cEste clan ya tiene el número máximo de jugadores.'
-    nodesc_tag: '&c<¡Sin descripción!>'
-    noname_tag: '&c<¡Sin nombre!>'
-    nothing_on_list: '&cNada aquí'
-    none: '&cNadie'
-    invite:
-      invited: '%tag% &eHa invitado a &a%invited%&e. &8(%invalid% invalid)'
-      offline: ' &7 - Offlines: &c%offline%'
-      hasclan: ' &7 - Tiene Clan: &c%hasclan%'
-    error_verify: '&cError al intentar, comprobar el clan'
-    rival_header: '&d&lLista de rivales. &8(tag/kdr/members)'
-    ally_header: '&d&lLista de aliados. &8(tag/kdr/members)'
-    info_header: '&d&lInformación del clan &8%clan_tag%&d&l:'
-    info_format:
-    - ' &7Tag: &b%clan_tag%'
-    - '&7Nombre: &b%clan_name%'
-    - '&7Desc: &b%clan_desc%'
-    - '&7Líder: &b%clan_leader%'
-    - '&7Fecha de creación: &b%clan_creation_date%'
-    - '&7Verificado: &b%clan_verified%'
-    - '7Kdr: &b%clan_kills%&8/&b%clan_deaths% &8(%clan_kdr%)'
-    - ' &7Miembros: &b%clan_members%'
-    - '&7Aliados: &b%clan_ally%'
-    - '&7Rival: &b%clan_rival%'
-    - ''
-    profile_format:
-    - ' &7Nombre: &b%player_name%'
-    - ' &7Clan: &b%clan_tag%'
-    - ' &7Líder del clan: &b%clan_leader%'
-    - '&7Kdr: &b%player_kills%&8/&b%player_deaths% &8(%player_kdr%)'
-    - ' &7Entrada en: &b%player_join_date%'
-    - '&7Última vez visto: &b%player_seen_date%'
-    - ' '
-    stats_format:
-    - ' &7Tag: &b%clan_tag%'
-    - ' &7Fecha de creacion: &b%clan_creation_date%'
-    - ' &7Verificado: &b%clan_verified%'
-    - ' &7Clan Kdr: &b%clan_kills%&8/&b%clan_deaths% &8(%clan_kdr%)'
-    - ' &7Miembros:'
-    stats_member_format: '  &7&a%list_player% &7- &b%list_player_role% &7- &b%list_player_kills%&8/&b%list_player_deaths% &8(%list_player_kdr%) &7[%list_player_seen_date%]'
-    new_ally: '%tag% &c&l! &eSe ha formado una nueva alianza con el clan &a%clan_tag%'
-    removed_ally: '%tag% &c&l! &eLa alianza con el clan &a%clan_tag% &ehas removed.'
-    ff_changed: '%tag% &c&l! &eEl fuego amigo es &b%value%.'
-    globalff_changed: '%tag% &c&l! &eEl fuego amistoso global es &b%value%.'
-    new_join: '%tag% &c&l! &eEl jugador &a%player% &eentered the Clan.'
-    new_kick: '%tag% &c&l! &eEl jugador &a%player% &fue expulsado del Clan.'
-    new_rival: '%tag% &c&l! &eNueva rivalidad con el Clan &a%clan_tag%'
-    removed_rival: '%tag% &c&l! &eLa rivalidad con el Clan &a%clan_tag% &fue deshecha.'
-    clan_deleted: '%tag% &c&l! &eEl Clan &b%clan_tag% &fue eliminado por &a%player%.'
-    clan_created: '%tag% &c&l! &eUn nuevo Clan &b%clan_tag% &ewas creado por &a%player%.'
-    clan_verify_changed: '%tag% &c&l! &eEl clan fue cambiado a &a%value%.'
-    new_promote: '%tag% &c&l! &eEl jugador &a%player% &egotó.'
-    new_demote: '%tag% &c&l! &cEl jugador &a%player% &ha sido degradado.'
-  traduction:
-    is_on: '&a&lOnline'
-    is_off: '&4&lOffline'
-    player: 'juador'
-    players: 'jugadores'
-    is_yes: '&b&lSI'
-    is_no: '&c&lNO'
-  json:
-    clan_ally_rival_list_format:
-        raw_text: ' &8%clan_tag% &7- &b%clan_kdr% &7- &b%clan_members_count%'
-        hover_text: '&aMuestra información del clan.'
-        click_type: 'SUGGEST_COMMAND'
-        click_action: '/clan info %clan_tag_nocolor%'
-    clan_list_format:
-        raw_text: ' &a%clan_rank%° &7- &8%clan_tag% &7- &f%clan_desc% &7- &b%clan_kdr% &7- &b%clan_members_count%'
-        hover_text: '&aHaga clic en mostrar información del clan.'
-        click_type: 'SUGGEST_COMMAND'
-        click_action: '/clan info %clan_tag_nocolor%'
-    list_next:
-        raw_text: ' &bSiguiente página >>'
-        hover_text: '&aHaga clic para ver la siguiente página.'
-        click_type: 'RUN_COMMAND'
-        click_action: '/clan list %next_page%'
-    list_prev:
-        raw_text: ' << &bPágina anterior'
-        hover_text: '&aHaga clic para ver la página anterior.'
-        click_type: 'RUN_COMMAND'
-        click_action: '/clan list %prev_page%'
-    list_controler:
-        raw_text: ' << &bPágina anterior'
-        hover_text: '&aHaga clic para ver la página anterior.'
-        click_type: 'RUN_COMMAND'
-        click_action: '/clan list %prev_page%'
-    clan_deleted:
-        raw_text: ' &a%clan_rank%° &7- &c&m¡Clan eliminado!'
-        hover_text: '&c¡Pronto dejará esta lista!'
-        click_type: ''
-        click_action: ''
-    invite_received:
-        raw_text: ' &c&l! &eHas recibido una invitación para unirte al Clan &f%clan_tag%&e, la invitación expira en &b%sec_expires% sec&e.'
-        raw_base_color: 'YELLOW'
-        hover_text: '&aHaz clic para ACEPTAR o DENEGAR.'
-        click_type: 'SUGGEST_COMMAND'
-        click_action: '/clan <join/deny> %clan_tag_nocolor%'
-    invite_accept:
-        raw_text: ' &7- Para aceptar usa &b/clan join %clan_tag_nocolor%'
-        hover_text: '&aHaga clic para aceptar.'
-        click_type: 'SUGGEST_COMMAND'
-        click_action: '/clan join %clan_tag_nocolor%'
-    invite_deny:
-        raw_text: ' &7- Para denegar utiliza &b/clan deny %clan_tag_nocolor%'
-        hover_text: '&cClick para denegar la solicitud.'
-        click_type: 'SUGGEST_COMMAND'
-        click_action: '/clan deny %clan_tag_nocolor%'
+    unicodeblock: '' # example, for russian character use 'CYRILLIC', all list in https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.UnicodeBlock.html

@@ -1,6 +1,49 @@
+#
+#Internal Placeholders:
+#CLAN
+# %uclans_hasclan%
+# %uclans_hasclan_formated%
+# %uclans_tag_nocolor%
+# %uclans_tag_color%
+# %uclans_tag_formated%
+# %uclans_desc_nocolor%
+# %uclans_desc_color%
+# %uclans_leader%
+# %uclans_creation_date%
+# %uclans_creation_date_formated%
+# %uclans_clanid%
+# %uclans_clan_kills%
+# %uclans_clan_deaths%
+# %uclans_clan_souls%
+# %uclans_clan_kdr%
+# %uclans_clan_home%
+# %uclans_clan_members%
+# %uclans_clan_onlinemembers%
+# %uclans_count_onlinemembers%
+# %uclans_clan_ally%
+# %uclans_clan_rival%
+# %uclans_count_members%
+# %uclans_name%
+# %uclans_leader%
+# %uclans_verified%
+#PLAYER
+# %uclans_player%
+# %uclans_player_name%
+# %uclans_player_kills%
+# %uclans_player_deaths%
+# %uclans_player_souls%
+# %uclans_player_kdr%
+# %uclans_level_identifier%
+# %uclans_tag_formated_level%
+# %uclans_player_joindate%
+# %uclans_player_joindate_formated%
+# %uclans_player_lastsee%
+# %uclans_player_lastsee_formated%
+# %uclans_player_leader_yes_no%
+# %uclans_player_mod_yes_no%
 Gui:
   members:
-    inventory_name: 'Lista de miembros [Pg: %page%]'
+    inventory_name: '&a&lLista de miembros [%page%/%pages%]'
     inventory_rows: 5
     sound-open: ''
     max_items: 27
@@ -8,33 +51,38 @@ Gui:
       current:
         sound-click: ''
         itemstack: 'SKULL_ITEM'
-        skullowner: '%player%'
+        skullowner: '%uclans_player%'
         texture: ''
         data: 3
         amount: 1
         slot: 0
-        name: '&a%player%'
+        name: '&a%uclans_player%'
         lore:
         - ''
-        - '&7Lider: &b%leader_yes_no%'
-        - '&7Moderadores: &b%mod_yes_no%'
-        - '&7Nombre de usuario: &b%player_name%'
-        - '&7Kdr: &b%player_kills%&8/&b%player_deaths% &8(%player_kdr%)'
-        - ' &7Entrada en: &b%player_join_date%'
-        - ' &7Última vez visto: &b%player_seen_date%'
+        - ' &7Lider: &b%uclans_player_leader_yes_no%'
+        - ' &7Moderadores: &b%uclans_player_mod_yes_no%'
+        - ' &7Nick: &b%uclans_player%'
+        - ' &7Kdr: &b%uclans_player_kills%&8/&b%uclans_player_deaths% &8(%uclans_player_kdr%)'
+        - ' &7Entrada en: &b%uclans_player_joindate_formated%'
+        - ' &7Última vez que fue visto: &b%uclans_player_lastsee_formated%'
         - ' '
-        - ' &cClic izquierdo para /tpa'
-        - ' &cClick derecho para expulsar al jugador'
+        - ' &cCLIC IZQUIERDO /tpa'
+        - ' &cCLIC DERECHO para expulsar al jugador'
         enchants:
         - ''
         flags:
         - ''
         left-action:
         - '[closegui]'
-        - '[player] /tpa %player%'
+        - '[player] /tpa %uclans_player%'
         right-action:
         - '[closegui]'
-        - '[player] /clan kick %player%'
+        - '[player] /clan kick %uclans_player%'
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
       prev:
         sound-click: ''
         itemstack: 'INK_SACK'
@@ -46,7 +94,7 @@ Gui:
         name: '&aPagina anterior'
         lore:
         - ''
-        - ' &eClic para volver atras.'
+        - ' &eHaz clic para volver.'
         enchants:
         - ''
         flags:
@@ -63,10 +111,10 @@ Gui:
         data: 8
         amount: 1
         slot: 42
-        name: '&aPagina siguiente'
+        name: '&aPagina Siguiente'
         lore:
         - ''
-        - ' &eClic para proceder.'
+        - ' &eHaga clic para continuar.'
         enchants:
         - ''
         flags:
@@ -83,10 +131,10 @@ Gui:
         data: 0
         amount: 1
         slot: 40
-        name: '&cVolver atras'
+        name: '&cVolver'
         lore:
         - ''
-        - ' &eClic para volver atras.'
+        - ' &eHaga clic para volver.'
         enchants:
         - ''
         flags:
@@ -95,3 +143,296 @@ Gui:
         - '[opengui] index_members'
         right-action:
         - '[opengui] index_members'
+  clans:
+    inventory_name: '&a&lClanes verificados [%page%/%pages%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'IRON_HELMET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 0
+        name: '&aClan %uclans_tag_color%'
+        lore:
+        - ''
+        - ' &eInformacion del clan'
+        - ' &7'
+        - ' &7Tag: &b%uclans_tag_color%'
+        - ' &7Lider: &b%uclans_leader%'
+        - ' &7Miembros: &b%uclans_count_members%'
+        - ''
+        - ' &eclic derecho para ver la información.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        right-action:
+        - '[closegui]'
+        - '[player] clan info %uclans_tag_nocolor%'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPagina anterior'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %prev%'
+        right-action:
+        - '[opengui_clans] %prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aPagina Siguiente'
+        lore:
+        - ''
+        - ' &eHaga clic para continuar.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %next%'
+        right-action:
+        - '[opengui_clans] %next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cVolver'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_hasclan'
+        right-action:
+        - '[opengui] index_hasclan'
+      extra:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cVolver.'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_noclan'
+        right-action:
+        - '[opengui] index_noclan'
+  rival:
+    inventory_name: '&a&lLista de rivales [%page%/%pages%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'GOLD_HELMET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 0
+        name: '&aClan %uclans_tag_color%'
+        lore:
+        - ''
+        - ' &eInformacion del clan'
+        - ' &7'
+        - ' &7Tag: &b%uclans_tag_color%'
+        - ' &7Lider: &b%uclans_leader%'
+        - ' &7Miembros: &b%uclans_count_members%'
+        - ''
+        - ' &eclic derecho para ver la información.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        right-action:
+        - '[closegui]'
+        - '[player] clan info %uclans_tag_nocolor%'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPagina anterior'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %prev%'
+        right-action:
+        - '[opengui_clans] %prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aPagina Siguiente'
+        lore:
+        - ''
+        - ' &eHaga clic para continuar.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %next%'
+        right-action:
+        - '[opengui_clans] %next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cVolver'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_rival'
+        right-action:
+        - '[opengui] index_rival'
+  ally:
+    inventory_name: '&a&lLista de aliados [%page%/%pages%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'DIAMOND_HELMET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 0
+        name: '&aClan %uclans_tag_color%'
+        lore:
+        - ''
+        - ' &eInformacion del clan'
+        - ' &7'
+        - ' &7Tag: &b%uclans_tag_color%'
+        - ' &7Lider: &b%uclans_leader%'
+        - ' &7Miembros: &b%uclans_count_members%'
+        - ''
+        - ' &eclic derecho para ver la información.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        right-action:
+        - '[closegui]'
+        - '[player] clan info %uclans_tag_nocolor%'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPagina anterior'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %prev%'
+        right-action:
+        - '[opengui_clans] %prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aPagina Siguiente'
+        lore:
+        - ''
+        - ' &eHaga clic para continuar.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_clans] %next%'
+        right-action:
+        - '[opengui_clans] %next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cVolver'
+        lore:
+        - ''
+        - ' &eHaga clic para volver.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_ally'
+        right-action:
+        - '[opengui] index_ally'
