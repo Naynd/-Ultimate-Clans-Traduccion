@@ -1,4 +1,14 @@
-# -Ultimate-Clans-Traduccion
-![image](https://user-images.githubusercontent.com/70446469/115977788-8196a680-a551-11eb-8aef-e9486a453223.png)
+# ⚔ Ultimate Clans V2 ⚔
+## _TRADUCCION_
 
-https://www.spigotmc.org/resources/⚔-ultimate-clans-v2-⚔-the-best-and-most-complete-system-of-clans-and-lands.85615/
+- El mejor y más completo sistema de clanes
+- Descargar el plugin [[LINK]](https://www.spigotmc.org/resources/⚔-ultimate-clans-v2-⚔-the-best-and-most-complete-system-of-clans-and-lands.85615/)
+
+| Archivos | Version |
+| ------ | ------ |
+| clangui.yml | 2.2.6 ✔ |
+| commands.yml | 2.2.6 ✔ |
+| config.yml | 2.2.6 ✔ |
+| json.yml | 2.2.6 ✔ |
+| lang.yml | 2.2.6 ✔ |
+| paginationgui.yml | 2.2.6 ✔ |
